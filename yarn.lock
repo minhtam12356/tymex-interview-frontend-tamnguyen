@@ -54,6 +54,11 @@
     classnames "^2.2.6"
     rc-util "^5.31.1"
 
+"@ant-design/nextjs-registry@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@ant-design/nextjs-registry/-/nextjs-registry-1.0.2.tgz#d2054a786f6a1f8e978f8f74f6a1d954c45af9a2"
+  integrity sha512-hmeBsD3Aq+bR9zlzvnE+zU0jGX6uamad5dk9nw/O5oZ7Pu+zonL+MuyUUw/olMOzqjq9iY+DZciJr9F86th3YQ==
+
 "@ant-design/react-slick@~1.1.2":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@ant-design/react-slick/-/react-slick-1.1.2.tgz#f84ce3e4d0dc941f02b16f1d1d6d7a371ffbb4f1"
@@ -2175,6 +2180,11 @@ prelude-ls@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
+
+prettier@^3.4.2:
+  version "3.4.2"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.4.2.tgz#a5ce1fb522a588bf2b78ca44c6e6fe5aa5a2b13f"
+  integrity sha512-e9MewbtFo+Fevyuxn/4rrcDAaq0IYxPGLvObpQjiZBMAzB9IGmzlnG9RZy3FFas+eBMu2vA0CszMeduow5dIuQ==
 
 prop-types@^15.8.1:
   version "15.8.1"

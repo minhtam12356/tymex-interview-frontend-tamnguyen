@@ -3,26 +3,31 @@
 import React from 'react';
 import { Col, Row, Space } from 'antd';
 import { droneFont } from '@/styles/font';
+import footerStyles from '@/styles/modules/footer.module.css';
 
 export const Navigation = () => {
   return (
-    <Space direction="vertical" className="">
-      <div className={droneFont.className}>NAVIGATION</div>
+    <Space direction="vertical">
+      <div
+        className={`${droneFont.className} ${footerStyles['information-title']}`}
+      >
+        NAVIGATION
+      </div>
       <Row gutter={50}>
         <Col className="font-normal">
-          <div>Home</div>
-          <div>About us</div>
-          <div>Our teams</div>
+          <p>Home</p>
+          <p>About us</p>
+          <p>Our teams</p>
         </Col>
         <Col className="font-normal">
-          <div>Whitepaper</div>
-          <div>Marketplace</div>
-          <div>Roadmap</div>
+          <p>Whitepaper</p>
+          <p>Marketplace</p>
+          <p>Roadmap</p>
         </Col>
         <Col className="font-normal">
-          <div>FAQs</div>
-          <div>News</div>
-          <div>Community</div>
+          <p>FAQs</p>
+          <p>News</p>
+          <p>Community</p>
         </Col>
       </Row>
     </Space>

@@ -22,14 +22,21 @@ header {
 }
 
 footer {
+  padding-top: 1rem;
   background: #17161a;
+  min-height: 550px;
+
+  & p {
+    cursor: pointer;
+  }
 }
 
 html,
 body {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   margin: 0 auto;
   background: #17161a;
+  height: 100vh;
 }
 
 body {
@@ -49,6 +56,7 @@ body {
 
 a {
   text-decoration: none;
+  color: white !important;
 }
 
 .container {
@@ -78,7 +86,8 @@ a {
 }
 
 .font-normal {
-  font-size: 1rem;
+  font-size: 1rem !important;
+  font-weight: 500;
 }
 
 .ant-card-body {

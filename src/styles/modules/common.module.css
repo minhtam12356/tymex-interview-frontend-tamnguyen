@@ -15,3 +15,21 @@
   background: linear-gradient(91.47deg, #d85697 -6%, #d34dd6 113.05%);
   box-shadow: 0px 0px 50px 0px #c064f952;
 }
+
+.input {
+  height: 2.5rem;
+  color: white !important;
+  background: none !important;
+  border-radius: 4px !important;
+}
+
+.input::placeholder {
+  color: rgba(137, 136, 139, 1) !important;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.input:focus,
+.input:hover {
+  border-color: #d85697 !important;
+}

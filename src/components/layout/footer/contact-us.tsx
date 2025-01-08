@@ -1,13 +1,13 @@
 'use client';
 
 import React from 'react';
-import { Col, Row, Typography } from 'antd';
+import { Col, Row, Space, Typography } from 'antd';
 
 const { Paragraph } = Typography;
 
 export const ContactUs = () => {
   return (
-    <div className="">
+    <Space direction="vertical" className="">
       <Paragraph>CONTACT US</Paragraph>
       <Row gutter={50}>
         <Col className="font-normal">
@@ -15,6 +15,6 @@ export const ContactUs = () => {
           <Paragraph>tymex-talent@tyme.com</Paragraph>
         </Col>
       </Row>
-    </div>
+    </Space>
   );
 };

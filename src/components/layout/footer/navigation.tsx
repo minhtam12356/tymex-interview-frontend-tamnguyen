@@ -1,12 +1,12 @@
 'use client';
 
 import React from 'react';
-import { Col, Row } from 'antd';
+import { Col, Row, Space } from 'antd';
 import { droneFont } from '@/styles/font';
 
 export const Navigation = () => {
   return (
-    <div className="">
+    <Space direction="vertical" className="">
       <div className={droneFont.className}>NAVIGATION</div>
       <Row gutter={50}>
         <Col className="font-normal">
@@ -25,6 +25,6 @@ export const Navigation = () => {
           <div>Community</div>
         </Col>
       </Row>
-    </div>
+    </Space>
   );
 };

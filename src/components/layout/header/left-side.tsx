@@ -1,11 +1,11 @@
 'use client';
 
-import React from 'react';
-import headerStyles from '@/styles/modules/header.module.css';
-import { Col, Row } from 'antd';
-import { useRouter } from 'next/navigation';
-import { useSearchParams } from 'next/navigation';
 import { droneFont } from '@/styles/font';
+import headerStyles from '@/styles/modules/header.module.css';
+import { MenuOutlined } from '@ant-design/icons';
+import { Col, Drawer, Row } from 'antd';
+import { useRouter, useSearchParams } from 'next/navigation';
+import React from 'react';
 
 const headers = [
   {
@@ -38,9 +38,19 @@ export const LeftSide = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const page = searchParams.get('page');
+  const [drawerVisible, setDrawerVisible] = React.useState(false);
+
+  const showDrawer = () => {
+    setDrawerVisible(true);
+  };
+
+  const closeDrawer = () => {
+    setDrawerVisible(false);
+  };
 
   const onChange = (page: string) => {
-    router.push(`/?page=${page}`, { scroll: false });
+    router.push(`?page=${page}`, { scroll: false });
+    closeDrawer();
   };
 
   return (
@@ -54,6 +64,29 @@ export const LeftSide = () => {
           {header.label}
         </Col>
       ))}
+
+      <Col className={headerStyles.hamburger}>
+        <MenuOutlined onClick={showDrawer} />
+
+        <Drawer
+          className={headerStyles.drawer}
+          placement="left"
+          closable={false}
+          onClose={closeDrawer}
+          open={drawerVisible}
+          width={250}
+        >
+          {headers.map((header) => (
+            <Row
+              onClick={() => onChange(header.key)}
+              className={`${headerStyles['drawer-text']} ${page === header.key ? headerStyles.active : ''}`}
+              key={header.key}
+            >
+              {header.label}
+            </Row>
+          ))}
+        </Drawer>
+      </Col>
     </Row>
   );
 };

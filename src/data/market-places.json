@@ -1,0 +1,1302 @@
+[
+  {
+    "id": 1,
+    "name": "Neon Guy",
+    "type": "rare",
+    "price": 20.75,
+    "image": "/characters/neon-guy.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 2,
+    "name": "The DJ",
+    "type": "epic",
+    "price": 2.75,
+    "image": "/characters/the-dj.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Mafia England",
+    "type": "epic",
+    "price": 2.75,
+    "image": "/characters/mafia-england.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Assassin",
+    "type": "legendary",
+    "price": 200.75,
+    "image": "/characters/assassin.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Neon Guy",
+    "type": "epic",
+    "price": 2,
+    "image": "/characters/neon-guy.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Mafia England",
+    "type": "common",
+    "price": 2.75,
+    "image": "/characters/mafia-england.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 7,
+    "name": "The DJ",
+    "type": "mythic",
+    "price": 2.75,
+    "image": "/characters/the-dj.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Neon Guy",
+    "type": "mythic",
+    "price": 2.75,
+    "image": "/characters/neon-guy.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Neon Guy",
+    "type": "legendary",
+    "price": 2.75,
+    "image": "/characters/neon-guy.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 10,
+    "name": "The DJ",
+    "type": "rare",
+    "price": 1,
+    "image": "/characters/the-dj.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 11,
+    "name": "Bassketball Girl",
+    "type": "legendary",
+    "price": 3,
+    "image": "/characters/basketball-girl.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 12,
+    "name": "The DJ",
+    "type": "common",
+    "price": 2.75,
+    "image": "/characters/the-dj.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 13,
+    "name": "Mafia England",
+    "type": "mythic",
+    "price": 2.75,
+    "image": "/characters/mafia-england.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 14,
+    "name": "Assassin",
+    "type": "mythic",
+    "price": 2.75,
+    "image": "/characters/assassin.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 15,
+    "name": "Neon Guy",
+    "type": "mythic",
+    "price": 2.75,
+    "image": "/characters/neon-guy.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 16,
+    "name": "Assassin",
+    "type": "rare",
+    "price": 2.75,
+    "image": "/characters/assassin.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 17,
+    "name": "The DJ",
+    "type": "common",
+    "price": 2.75,
+    "image": "/characters/the-dj.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 18,
+    "name": "Mafia England",
+    "type": "legendary",
+    "price": 2.75,
+    "image": "/characters/mafia-england.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 19,
+    "name": "Bassketball Girl",
+    "type": "rare",
+    "price": 2.75,
+    "image": "/characters/basketball-girl.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 20,
+    "name": "Assassin",
+    "type": "common",
+    "price": 2.75,
+    "image": "/characters/assassin.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 21,
+    "name": "Assassin",
+    "type": "legendary",
+    "price": 2.75,
+    "image": "/characters/assassin.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 22,
+    "name": "Neon Guy",
+    "type": "common",
+    "price": 2.75,
+    "image": "/characters/neon-guy.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 23,
+    "name": "Neon Guy",
+    "type": "rare",
+    "price": 2.75,
+    "image": "/characters/neon-guy.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 24,
+    "name": "Neon Guy",
+    "type": "common",
+    "price": 2.75,
+    "image": "/characters/neon-guy.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 25,
+    "name": "The DJ",
+    "type": "epic",
+    "price": 2.75,
+    "image": "/characters/the-dj.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 26,
+    "name": "Neon Guy",
+    "type": "legendary",
+    "price": 2.75,
+    "image": "/characters/neon-guy.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 27,
+    "name": "Bassketball Girl",
+    "type": "epic",
+    "price": 2.75,
+    "image": "/characters/basketball-girl.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 28,
+    "name": "Neon Guy",
+    "type": "common",
+    "price": 2.75,
+    "image": "/characters/neon-guy.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 29,
+    "name": "The DJ",
+    "type": "rare",
+    "price": 2.75,
+    "image": "/characters/the-dj.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 30,
+    "name": "Assassin",
+    "type": "mythic",
+    "price": 2.75,
+    "image": "/characters/assassin.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 31,
+    "name": "Assassin",
+    "type": "rare",
+    "price": 2.75,
+    "image": "/characters/assassin.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 32,
+    "name": "Mafia England",
+    "type": "common",
+    "price": 2.75,
+    "image": "/characters/mafia-england.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 33,
+    "name": "Mafia England",
+    "type": "common",
+    "price": 2.75,
+    "image": "/characters/mafia-england.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 34,
+    "name": "Neon Guy",
+    "type": "mythic",
+    "price": 2.75,
+    "image": "/characters/neon-guy.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 35,
+    "name": "Neon Guy",
+    "type": "common",
+    "price": 2.75,
+    "image": "/characters/neon-guy.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 36,
+    "name": "The DJ",
+    "type": "legendary",
+    "price": 2.75,
+    "image": "/characters/the-dj.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 37,
+    "name": "Neon Guy",
+    "type": "rare",
+    "price": 2.75,
+    "image": "/characters/neon-guy.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 38,
+    "name": "The DJ",
+    "type": "legendary",
+    "price": 2.75,
+    "image": "/characters/the-dj.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 39,
+    "name": "Neon Guy",
+    "type": "common",
+    "price": 2.75,
+    "image": "/characters/neon-guy.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 40,
+    "name": "Bassketball Girl",
+    "type": "mythic",
+    "price": 2.75,
+    "image": "/characters/basketball-girl.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 41,
+    "name": "Mafia England",
+    "type": "epic",
+    "price": 2.75,
+    "image": "/characters/mafia-england.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 42,
+    "name": "Assassin",
+    "type": "legendary",
+    "price": 2.75,
+    "image": "/characters/assassin.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 43,
+    "name": "Bassketball Girl",
+    "type": "mythic",
+    "price": 2.75,
+    "image": "/characters/basketball-girl.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 44,
+    "name": "Neon Guy",
+    "type": "legendary",
+    "price": 2.75,
+    "image": "/characters/neon-guy.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 45,
+    "name": "The DJ",
+    "type": "common",
+    "price": 2.75,
+    "image": "/characters/the-dj.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 46,
+    "name": "Mafia England",
+    "type": "legendary",
+    "price": 2.75,
+    "image": "/characters/mafia-england.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 47,
+    "name": "Assassin",
+    "type": "legendary",
+    "price": 2.75,
+    "image": "/characters/assassin.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 48,
+    "name": "Assassin",
+    "type": "epic",
+    "price": 2.75,
+    "image": "/characters/assassin.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 49,
+    "name": "Mafia England",
+    "type": "legendary",
+    "price": 2.75,
+    "image": "/characters/mafia-england.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 50,
+    "name": "Mafia England",
+    "type": "epic",
+    "price": 2.75,
+    "image": "/characters/mafia-england.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 51,
+    "name": "Mafia England",
+    "type": "common",
+    "price": 2.75,
+    "image": "/characters/mafia-england.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 52,
+    "name": "Assassin",
+    "type": "common",
+    "price": 2.75,
+    "image": "/characters/assassin.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 53,
+    "name": "Mafia England",
+    "type": "rare",
+    "price": 2.75,
+    "image": "/characters/mafia-england.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 54,
+    "name": "Assassin",
+    "type": "rare",
+    "price": 2.75,
+    "image": "/characters/assassin.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 55,
+    "name": "Bassketball Girl",
+    "type": "mythic",
+    "price": 2.75,
+    "image": "/characters/basketball-girl.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 56,
+    "name": "Assassin",
+    "type": "mythic",
+    "price": 2.75,
+    "image": "/characters/assassin.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 57,
+    "name": "Mafia England",
+    "type": "epic",
+    "price": 2.75,
+    "image": "/characters/mafia-england.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 58,
+    "name": "Bassketball Girl",
+    "type": "mythic",
+    "price": 2.75,
+    "image": "/characters/basketball-girl.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 59,
+    "name": "Assassin",
+    "type": "legendary",
+    "price": 2.75,
+    "image": "/characters/assassin.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 60,
+    "name": "Neon Guy",
+    "type": "mythic",
+    "price": 2.75,
+    "image": "/characters/neon-guy.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 61,
+    "name": "The DJ",
+    "type": "rare",
+    "price": 2.75,
+    "image": "/characters/the-dj.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 62,
+    "name": "Mafia England",
+    "type": "epic",
+    "price": 2.75,
+    "image": "/characters/mafia-england.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 63,
+    "name": "Assassin",
+    "type": "rare",
+    "price": 2.75,
+    "image": "/characters/assassin.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 64,
+    "name": "Neon Guy",
+    "type": "epic",
+    "price": 2.75,
+    "image": "/characters/neon-guy.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 65,
+    "name": "Assassin",
+    "type": "epic",
+    "price": 2.75,
+    "image": "/characters/assassin.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 66,
+    "name": "The DJ",
+    "type": "common",
+    "price": 2.75,
+    "image": "/characters/the-dj.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 67,
+    "name": "Mafia England",
+    "type": "rare",
+    "price": 2.75,
+    "image": "/characters/mafia-england.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 68,
+    "name": "Mafia England",
+    "type": "epic",
+    "price": 2.75,
+    "image": "/characters/mafia-england.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 69,
+    "name": "Assassin",
+    "type": "epic",
+    "price": 2.75,
+    "image": "/characters/assassin.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 70,
+    "name": "Assassin",
+    "type": "mythic",
+    "price": 2.75,
+    "image": "/characters/assassin.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 71,
+    "name": "Neon Guy",
+    "type": "rare",
+    "price": 2.75,
+    "image": "/characters/neon-guy.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 72,
+    "name": "The DJ",
+    "type": "legendary",
+    "price": 2.75,
+    "image": "/characters/the-dj.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 73,
+    "name": "Bassketball Girl",
+    "type": "epic",
+    "price": 2.75,
+    "image": "/characters/basketball-girl.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 74,
+    "name": "Neon Guy",
+    "type": "epic",
+    "price": 2.75,
+    "image": "/characters/neon-guy.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 75,
+    "name": "Assassin",
+    "type": "common",
+    "price": 2.75,
+    "image": "/characters/assassin.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 76,
+    "name": "The DJ",
+    "type": "legendary",
+    "price": 2.75,
+    "image": "/characters/the-dj.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 77,
+    "name": "The DJ",
+    "type": "rare",
+    "price": 2.75,
+    "image": "/characters/the-dj.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 78,
+    "name": "Assassin",
+    "type": "common",
+    "price": 2.75,
+    "image": "/characters/assassin.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 79,
+    "name": "The DJ",
+    "type": "legendary",
+    "price": 2.75,
+    "image": "/characters/the-dj.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 80,
+    "name": "Assassin",
+    "type": "mythic",
+    "price": 2.75,
+    "image": "/characters/assassin.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 81,
+    "name": "Bassketball Girl",
+    "type": "legendary",
+    "price": 2.75,
+    "image": "/characters/basketball-girl.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 82,
+    "name": "Assassin",
+    "type": "common",
+    "price": 2.75,
+    "image": "/characters/assassin.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 83,
+    "name": "The DJ",
+    "type": "common",
+    "price": 2.75,
+    "image": "/characters/the-dj.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 84,
+    "name": "Bassketball Girl",
+    "type": "epic",
+    "price": 2.75,
+    "image": "/characters/basketball-girl.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 85,
+    "name": "Bassketball Girl",
+    "type": "epic",
+    "price": 2.75,
+    "image": "/characters/basketball-girl.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 86,
+    "name": "The DJ",
+    "type": "legendary",
+    "price": 2.75,
+    "image": "/characters/the-dj.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 87,
+    "name": "Neon Guy",
+    "type": "rare",
+    "price": 2.75,
+    "image": "/characters/neon-guy.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 88,
+    "name": "Mafia England",
+    "type": "rare",
+    "price": 2.75,
+    "image": "/characters/mafia-england.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 89,
+    "name": "Mafia England",
+    "type": "common",
+    "price": 2.75,
+    "image": "/characters/mafia-england.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 90,
+    "name": "Mafia England",
+    "type": "rare",
+    "price": 2.75,
+    "image": "/characters/mafia-england.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 91,
+    "name": "Bassketball Girl",
+    "type": "common",
+    "price": 2.75,
+    "image": "/characters/basketball-girl.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 92,
+    "name": "Assassin",
+    "type": "epic",
+    "price": 2.75,
+    "image": "/characters/assassin.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 93,
+    "name": "Bassketball Girl",
+    "type": "common",
+    "price": 2.75,
+    "image": "/characters/basketball-girl.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 94,
+    "name": "Neon Guy",
+    "type": "epic",
+    "price": 2.75,
+    "image": "/characters/neon-guy.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 95,
+    "name": "Mafia England",
+    "type": "epic",
+    "price": 2.75,
+    "image": "/characters/mafia-england.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 96,
+    "name": "Neon Guy",
+    "type": "epic",
+    "price": 2.75,
+    "image": "/characters/neon-guy.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 97,
+    "name": "The DJ",
+    "type": "mythic",
+    "price": 2.75,
+    "image": "/characters/the-dj.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 98,
+    "name": "Bassketball Girl",
+    "type": "legendary",
+    "price": 2.75,
+    "image": "/characters/basketball-girl.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 99,
+    "name": "Neon Guy",
+    "type": "legendary",
+    "price": 2.75,
+    "image": "/characters/neon-guy.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": false,
+      "avatar": "/author-example.jpeg"
+    }
+  },
+  {
+    "id": 100,
+    "name": "The DJ",
+    "type": "common",
+    "price": 2.75,
+    "image": "/characters/the-dj.png",
+    "unit": "ETH",
+    "author": {
+      "name": "Ghozali_Ghozalu",
+      "verified": true,
+      "avatar": "/author-example.jpeg"
+    }
+  }
+]

@@ -7,6 +7,7 @@ export interface IAuthor {
 export interface ICharacter {
   id: number;
   name: string;
+  image: string;
   type: string;
   price: number;
   unit: string;

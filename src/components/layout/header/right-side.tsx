@@ -8,7 +8,7 @@ import { Image } from '@/components/image';
 
 const items: MenuProps['items'] = [
   {
-    label: <p>English</p>,
+    label: <p style={{ color: 'black' }}>English</p>,
     key: '0',
   },
 ];

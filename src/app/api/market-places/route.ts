@@ -1,5 +1,5 @@
 import { type NextRequest } from 'next/server';
-// import marketPlaces from '@/data/market.json';
+import marketPlaces from '@/data/market-places.json';
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
@@ -9,7 +9,7 @@ export async function GET(request: NextRequest) {
   const start = offset;
   const end = offset + limit;
 
-  console.log(start, end);
-
-  // return marketPlaces.slice(start, end) ?? [];
+  return new Response(JSON.stringify(marketPlaces.slice(start, end) ?? []), {
+    headers: { 'Content-Type': 'application/json' },
+  });
 }

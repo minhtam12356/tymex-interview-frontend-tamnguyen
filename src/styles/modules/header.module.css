@@ -35,3 +35,29 @@
   height: 100%;
   border-bottom: 2px solid #da458f;
 }
+
+.hamburger {
+  display: none;
+}
+
+.drawer {
+  background: #17161ab2 !important;
+  & div {
+    font-family: 'droneFont', 'droneFont Fallback' !important;
+  }
+}
+
+.drawer-text {
+  cursor: pointer;
+  padding: 0.6rem 0;
+}
+
+@media (max-width: 1024px) {
+  .header-tabs {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

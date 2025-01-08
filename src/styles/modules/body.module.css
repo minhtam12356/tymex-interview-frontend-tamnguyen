@@ -3,3 +3,124 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
+.character-card-avatar {
+  width: 14.6875rem;
+  height: 14.5625rem;
+  padding: 0.6rem;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.character-card {
+  width: 16.6875rem;
+  height: 22.8125rem;
+  padding: 1rem !important;
+  background: rgba(58, 56, 65, 0.6) !important;
+  border: none !important;
+  border-radius: 10px;
+}
+
+.avatar {
+  width: 235px;
+  position: absolute;
+  top: 2.2rem;
+  left: 0;
+}
+
+.card-type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  text-transform: capitalize;
+  background: rgba(58, 56, 65, 0.6) !important;
+  border-radius: 4px;
+  padding: 0 0.8rem;
+}
+
+.love {
+  width: 16px;
+  height: 15px;
+}
+
+.character-card-avatar-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cost {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-weight: 500;
+}
+
+.price {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 4rem;
+  margin-right: 0.3rem;
+}
+
+.unit {
+  display: flex;
+  align-items: center;
+  margin-right: 0.4rem;
+}
+
+.character-information {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.character-information-name {
+  font-size: 1rem;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 10rem;
+}
+
+.character-information-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.character-information-author {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.character-information-author-name {
+  margin-left: 0.6rem;
+  font-size: 12px;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100px;
+}
+
+.character-information-author-avatar {
+  position: relative;
+}
+
+.character-information-author-verify {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  right: 1px;
+  bottom: 7px;
+}

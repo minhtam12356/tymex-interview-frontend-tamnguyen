@@ -1,7 +1,9 @@
 .main {
+  padding-top: 8rem;
   background-image: url('/body-bg.png');
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .character-card-avatar {
@@ -38,6 +40,7 @@
   background: rgba(58, 56, 65, 0.6) !important;
   border-radius: 4px;
   padding: 0 0.8rem;
+  color: white;
 }
 
 .love {
@@ -64,12 +67,14 @@
   white-space: nowrap;
   max-width: 4rem;
   margin-right: 0.3rem;
+  color: white;
 }
 
 .unit {
   display: flex;
   align-items: center;
   margin-right: 0.4rem;
+  color: white;
 }
 
 .character-information {
@@ -87,6 +92,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   width: 10rem;
+  color: white;
 }
 
 .character-information-header {
@@ -111,6 +117,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   width: 100px;
+  color: white;
 }
 
 .character-information-author-avatar {
@@ -123,4 +130,50 @@
   position: absolute;
   right: 1px;
   bottom: 7px;
+}
+
+.character-list {
+  display: flex;
+  gap: 2rem;
+  max-height: 124rem;
+  overflow: auto;
+}
+
+.container {
+  flex-flow: unset !important;
+  flex-direction: column;
+}
+
+.search-input {
+  color: #89888b !important;
+  border-color: #89888b !important;
+}
+
+.search-input::placeholder {
+  color: #89888b !important;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.filter {
+  max-width: 372px !important;
+  width: 100%;
+  margin-right: 2rem !important;
+}
+
+.group-character-list {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    flex-flow: row wrap !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .filter {
+    min-width: unset !important;
+    margin: 0 !important;
+  }
 }

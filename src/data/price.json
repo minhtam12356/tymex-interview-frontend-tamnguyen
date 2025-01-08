@@ -1,0 +1,10 @@
+[
+  {
+    "value": "low-to-high",
+    "label": "Low to high"
+  },
+  {
+    "value": "high-to-low",
+    "label": "High to low"
+  }
+]

@@ -34,7 +34,7 @@ export const CharacterCardInformation = (props: {
           >
             {formatPrice(price)}
           </Tooltip>{' '}
-          {unit}
+          <div style={{ color: 'white' }}>{unit}</div>
         </div>
       </div>
 

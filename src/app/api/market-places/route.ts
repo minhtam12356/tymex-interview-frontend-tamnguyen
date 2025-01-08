@@ -3,7 +3,7 @@ import marketPlaces from '@/data/market-places.json';
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
-  const limit = +(searchParams.get('limit') ?? 10);
+  const limit = +(searchParams.get('limit') ?? 30);
   const offset = +(searchParams.get('offset') ?? 0);
 
   const start = offset;

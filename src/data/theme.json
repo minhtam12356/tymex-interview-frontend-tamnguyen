@@ -1,0 +1,14 @@
+[
+  {
+    "value": "halloween",
+    "label": "Halloween"
+  },
+  {
+    "value": "dark",
+    "label": "Dark"
+  },
+  {
+    "value": "light",
+    "label": "Light"
+  }
+]

@@ -4,8 +4,9 @@ import { droneFont } from '@/styles/font';
 import headerStyles from '@/styles/modules/header.module.css';
 import { MenuOutlined } from '@ant-design/icons';
 import { Col, Drawer, Row } from 'antd';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import React from 'react';
+import { useChangeParam } from '@/hook/useChangeParam';
 
 const headers = [
   {
@@ -36,8 +37,8 @@ const headers = [
 
 export const LeftSide = () => {
   const router = useRouter();
-  const searchParams = useSearchParams();
-  const page = searchParams.get('page');
+  const { getParam } = useChangeParam();
+  const page = getParam('page');
   const [drawerVisible, setDrawerVisible] = React.useState(false);
 
   const showDrawer = () => {

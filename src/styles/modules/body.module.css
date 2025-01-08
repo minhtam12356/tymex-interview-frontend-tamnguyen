@@ -139,6 +139,25 @@
   overflow: auto;
 }
 
+.character-list::before {
+  padding-right: 10px;
+}
+
+.character-list::-webkit-scrollbar {
+  height: auto;
+  width: 6px;
+}
+
+.character-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 204, 33, 1) !important;
+  border-radius: 4px;
+}
+
+.character-list::-webkit-scrollbar-track {
+  background: rgba(119, 119, 119, 1);
+  border-radius: 4px;
+}
+
 .container {
   flex-flow: unset !important;
   flex-direction: column;
@@ -156,7 +175,7 @@
 }
 
 .filter {
-  max-width: 372px !important;
+  max-width: 350px !important;
   width: 100%;
   margin-right: 2rem !important;
 }

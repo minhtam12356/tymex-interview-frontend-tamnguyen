@@ -5,13 +5,14 @@ import { ICharacter } from '@/common';
 import { CharacterCardAvatar } from './character-card-avatar';
 import { CharacterCardInformation } from './character-card-information';
 
-export const CharacterCard: React.FC<{ information: ICharacter }> = ({
-  information,
-}) => {
+export const CharacterCard: React.FC<{
+  information: ICharacter;
+  loading?: boolean;
+}> = ({ information, loading = false }) => {
   const { id, name, author, image, price, type, unit } = information;
 
   return (
-    <Card className={bodyStyles['character-card']} hoverable>
+    <Card loading={loading} className={bodyStyles['character-card']} hoverable>
       <CharacterCardAvatar id={id} image={image} type={type} />
       <CharacterCardInformation
         name={name}

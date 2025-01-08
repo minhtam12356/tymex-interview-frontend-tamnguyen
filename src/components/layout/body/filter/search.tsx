@@ -9,11 +9,13 @@ import { debounce } from '@/utilities';
 
 interface ISearchProps {
   placeholder?: string;
+  defaultValue?: string;
   onSearch: (text: string) => void;
 }
 
 export const Search: React.FC<ISearchProps> = ({
   placeholder = 'Quick search',
+  defaultValue,
   onSearch,
 }) => {
   const inputRef = useRef<InputRef>(null);
@@ -36,6 +38,7 @@ export const Search: React.FC<ISearchProps> = ({
         placeholder={placeholder}
         ref={inputRef}
         onKeyUp={onSearchText}
+        defaultValue={defaultValue}
         // prefix={<SearchOutlined style={{ color: '#89888b !important' }} />}
       />
     </div>

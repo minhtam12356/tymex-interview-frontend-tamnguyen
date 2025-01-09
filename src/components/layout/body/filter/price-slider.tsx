@@ -1,9 +1,10 @@
 'use client';
 
-import { Slider } from 'antd';
+import { Col, Row, Slider } from 'antd';
 import React from 'react';
 import { useChangeParam } from '@/hook/useChangeParam';
 // import { SliderOutlined } from '@ant-design/icons';
+import bodyStyles from '@/styles/modules/body.module.css';
 
 interface IPriceSliderProps {
   name?: string;
@@ -20,8 +21,30 @@ export const PriceSlider: React.FC<IPriceSliderProps> = ({}) => {
   };
 
   return (
-    <div className="">
+    <div className={bodyStyles['slider-container']}>
+      <div className={`font-16 ${bodyStyles['slider-label']}`}>PRICE</div>
       <Slider
+        className={bodyStyles.slider}
+        tooltip={{
+          placement: 'top',
+          className: 'slider-range-custom',
+          formatter: (value) => `${value} ETH`,
+          open: true,
+          style: {
+            background: 'red !important',
+          },
+        }}
+        styles={{
+          rail: { background: 'var(--border)', height: 8 },
+          track: {
+            background:
+              'linear-gradient(91.27deg, #da458f00 0.55%, #DA41A2 24.03%, #DA37CE 83.19%, #da34dd00 102.8%)',
+            height: 8,
+          },
+          handle: {
+            boxShadow: '0px 0px 16px 3px #da40a387',
+          },
+        }}
         range
         defaultValue={[
           +(getParam('priceStart') ?? 0),
@@ -31,6 +54,10 @@ export const PriceSlider: React.FC<IPriceSliderProps> = ({}) => {
         max={1000}
         onChangeComplete={onChangeComplete}
       />
+      <Row className={bodyStyles['slider-range']} justify="space-between">
+        <Col className="font-16">0.01 ETH</Col>
+        <Col className="font-16">1000 ETH</Col>
+      </Row>
     </div>
   );
 };

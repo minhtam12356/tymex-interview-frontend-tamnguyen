@@ -135,7 +135,7 @@
 .character-list {
   display: flex;
   gap: 2rem;
-  max-height: 124rem;
+  max-height: 122rem;
   overflow: auto;
   margin-top: 2rem;
 }
@@ -173,13 +173,13 @@
 }
 
 .filter {
-  max-width: 350px !important;
-  width: 100%;
-  margin-right: 2rem !important;
+  min-width: 340px !important;
+  margin-right: 3rem !important;
 }
 
 .group-character-list {
   width: 100%;
+  overflow: hidden;
 }
 
 .group-select {
@@ -216,6 +216,23 @@
   width: 18px !important;
   height: 18px !important;
   margin-right: 6px;
+}
+
+.slider-container {
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+}
+
+.slider-label {
+  margin-bottom: 1.5rem;
+}
+
+.slider-range {
+  margin-top: 1.5rem;
+
+  & div {
+    color: #d6d6d6;
+  }
 }
 
 @media (max-width: 1024px) {

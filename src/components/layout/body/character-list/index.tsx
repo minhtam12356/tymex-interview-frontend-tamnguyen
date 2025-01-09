@@ -1,24 +1,24 @@
 'use client';
 
-// import { useSearchParams } from 'next/navigation';
 import { CharacterCard } from '@/components/character-card';
 import React from 'react';
-import { ICharacter } from '@/common';
+import { DEFAULT_LIMIT, ICharacter } from '@/common';
 import { Row } from 'antd';
 import bodyStyles from '@/styles/modules/body.module.css';
-import commonStyles from '@/styles/modules/common.module.css';
 import { useChangeParam } from '@/hook/useChangeParam';
 import { useSearchParams } from 'next/navigation';
 import { CardSkeleton } from './card-skeleton';
+import { ViewMoreButton } from './view-more-button';
 
 export const CharacterList = () => {
   const [characters, setCharacters] = React.useState<ICharacter[]>([]);
   const [isLoading, setIsLoading] = React.useState(false);
+  const [isLoadingViewMore, setIsLoadingViewMore] = React.useState(false);
+  const [isEndList, setIsEndList] = React.useState(true);
   const { getParams } = useChangeParam();
   const searchParams = useSearchParams();
 
-  const getCharacters = async () => {
-    setIsLoading(true);
+  const getQueryObject = () => {
     const queryObject = getParams();
     delete queryObject['page'];
 
@@ -26,15 +26,46 @@ export const CharacterList = () => {
       delete queryObject['tier'];
     }
 
+    return queryObject;
+  };
+
+  const getCharacters = async () => {
+    setIsLoading(true);
+    const queryObject = getQueryObject();
     const queryParams = new URLSearchParams(queryObject).toString();
 
     const response = await fetch(`/api/market-places?${queryParams}`);
     const jsonData = await response.json();
 
-    if (jsonData?.data?.length) {
-      setCharacters(jsonData?.data);
+    if (jsonData?.total === jsonData?.data?.length) {
+      setIsEndList(true);
+    } else {
+      setIsEndList(false);
     }
+
+    setCharacters(jsonData?.data);
     setIsLoading(false);
+  };
+
+  const getMoreCharacters = async () => {
+    setIsLoadingViewMore(true);
+    const queryObject = getQueryObject();
+
+    queryObject['limit'] = DEFAULT_LIMIT.toString();
+    queryObject['offset'] = characters.length.toString();
+
+    const queryParams = new URLSearchParams(queryObject).toString();
+
+    const response = await fetch(`/api/market-places?${queryParams}`);
+    const jsonData = await response.json();
+    const newCharacters = [...characters, ...jsonData?.data];
+
+    if (jsonData?.total === newCharacters?.length) {
+      setIsEndList(true);
+    }
+
+    setCharacters(newCharacters);
+    setIsLoadingViewMore(false);
   };
 
   React.useEffect(() => {
@@ -53,6 +84,7 @@ export const CharacterList = () => {
               <CharacterCard key={character.id} information={character} />
             ))
           : 'No data!'}
+        {isLoadingViewMore ? <CardSkeleton /> : <></>}
       </Row>
 
       <Row
@@ -63,13 +95,12 @@ export const CharacterList = () => {
           marginTop: '3.2rem',
         }}
       >
-        <div
-          className={`font-16 ${commonStyles.button}`}
-          style={{ width: '20rem', height: '4.375rem' }}
-          // onClick={onSearch}
-        >
-          View more
-        </div>
+        <ViewMoreButton
+          hidden={!characters?.length}
+          isEndList={isEndList}
+          loading={isLoadingViewMore}
+          onLoadMore={getMoreCharacters}
+        />
       </Row>
     </div>
   );

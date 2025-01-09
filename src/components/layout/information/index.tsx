@@ -5,7 +5,6 @@ import { Image } from '@/components/image';
 const CharactersBanner = () => {
   return (
     <div style={{ paddingTop: '10rem' }}>
-      {/* <NewArrival /> */}
       <Image src="/characters-banner.svg" alt="characters banner" />
     </div>
   );

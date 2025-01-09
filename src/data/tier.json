@@ -4,24 +4,12 @@
     "label": "All"
   },
   {
-    "value": "epic",
-    "label": "Epic"
+    "value": "upper-body",
+    "label": "Upper Body"
   },
   {
-    "value": "common",
-    "label": "Common"
-  },
-  {
-    "value": "legendary",
-    "label": "Legendary"
-  },
-  {
-    "value": "rare",
-    "label": "Rare"
-  },
-  {
-    "value": "mythic",
-    "label": "Mythic"
+    "value": "lower-body",
+    "label": "Lower Body"
   },
   {
     "value": "hat",
@@ -32,15 +20,27 @@
     "label": "Shoes"
   },
   {
-    "value": "upper-body",
-    "label": "Upper Body"
-  },
-  {
-    "value": "lower-body",
-    "label": "Lower Body"
-  },
-  {
     "value": "accessory",
     "label": "Accessory"
+  },
+  {
+    "value": "legendary",
+    "label": "Legendary"
+  },
+  {
+    "value": "mythic",
+    "label": "Mythic"
+  },
+  {
+    "value": "epic",
+    "label": "Epic"
+  },
+  {
+    "value": "rare",
+    "label": "Rare"
+  },
+  {
+    "value": "common",
+    "label": "Common"
   }
 ]

@@ -14,17 +14,17 @@ export const Navigation = () => {
         NAVIGATION
       </div>
       <Row gutter={50}>
-        <Col className="font-normal">
+        <Col className="font-16">
           <p>Home</p>
           <p>About us</p>
           <p>Our teams</p>
         </Col>
-        <Col className="font-normal">
+        <Col className="font-16">
           <p>Whitepaper</p>
           <p>Marketplace</p>
           <p>Roadmap</p>
         </Col>
-        <Col className="font-normal">
+        <Col className="font-16">
           <p>FAQs</p>
           <p>News</p>
           <p>Community</p>

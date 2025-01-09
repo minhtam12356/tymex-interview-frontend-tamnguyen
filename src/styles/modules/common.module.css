@@ -23,7 +23,7 @@
 }
 
 .input::placeholder {
-  color: rgba(137, 136, 139, 1) !important;
+  color: var(--blur) !important;
   font-size: 12px;
   font-weight: 500;
 }

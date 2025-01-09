@@ -14,7 +14,7 @@ const CharactersBanner = () => {
 export const Information = () => {
   return (
     <div className={styles.main}>
-      <div style={{ background: 'rgba(0, 0, 0, 0.7);', position: 'relative' }}>
+      <div style={{ background: '#000000b3', position: 'relative' }}>
         <CharactersBanner />
       </div>
     </div>

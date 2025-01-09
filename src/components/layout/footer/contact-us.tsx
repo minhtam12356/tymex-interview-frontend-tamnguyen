@@ -15,7 +15,7 @@ export const ContactUs = () => {
         CONTACT US
       </div>
       <Row gutter={50}>
-        <Col className="font-normal">
+        <Col className="font-16">
           <ContactGroup
             href="tel:01234568910"
             label="01234568910"

@@ -21,6 +21,11 @@ export const CharacterList = () => {
     setIsLoading(true);
     const queryObject = getParams();
     delete queryObject['page'];
+
+    if (queryObject?.tier === 'all') {
+      delete queryObject['tier'];
+    }
+
     const queryParams = new URLSearchParams(queryObject).toString();
 
     const response = await fetch(`/api/market-places?${queryParams}`);
@@ -59,7 +64,7 @@ export const CharacterList = () => {
         }}
       >
         <div
-          className={`font-normal ${commonStyles.button}`}
+          className={`font-16 ${commonStyles.button}`}
           style={{ width: '20rem', height: '4.375rem' }}
           // onClick={onSearch}
         >

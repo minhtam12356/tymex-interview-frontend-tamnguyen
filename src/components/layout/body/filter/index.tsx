@@ -9,13 +9,56 @@ import times from '@/data/time.json';
 import prices from '@/data/price.json';
 import { Action } from './action';
 import { useChangeParam } from '@/hook/useChangeParam';
+import React from 'react';
+
+const defaultFilters = {
+  tier: 'all',
+  theme: 'halloween',
+  time: 'latest',
+  price: 'low-to-high',
+};
 
 export const Filter = () => {
-  const { onChangeParam, getParam } = useChangeParam();
+  const { onChangeParams, onChangeParam, getParam } = useChangeParam();
+  const [filters, setFilters] = React.useState<typeof defaultFilters>({
+    tier: '',
+    theme: '',
+    time: '',
+    price: '',
+  });
 
   const onSearchText = (text: string) => {
     onChangeParam('text', text);
   };
+
+  const onChangeFilter = (key: string, value: string) => {
+    setFilters((prevFilter) => {
+      return {
+        ...prevFilter,
+        [key]: value,
+      };
+    });
+  };
+
+  const onClearFilter = () => {
+    onChangeParams(defaultFilters);
+    setFilters(defaultFilters);
+  };
+
+  const onSearchFilter = () => {
+    onChangeParams(filters);
+  };
+
+  React.useEffect(() => {
+    const currentParams = {
+      tier: getParam('tier') ?? 'all',
+      theme: getParam('theme') ?? 'halloween',
+      time: getParam('time') ?? 'latest',
+      price: getParam('price') ?? 'low-to-high',
+    };
+
+    setFilters(currentParams);
+  }, []);
 
   return (
     <div>
@@ -24,28 +67,28 @@ export const Filter = () => {
       <GroupSelect
         label="TIER"
         options={tiers}
-        defaultValue={getParam('tier') ?? 'all'}
-        onChange={(tier) => onChangeParam('tier', tier)}
+        value={filters?.tier}
+        onChange={(tier) => onChangeFilter('tier', tier)}
       />
       <GroupSelect
         label="THEME"
         options={themes}
-        defaultValue={getParam('theme') ?? 'halloween'}
-        onChange={(theme) => onChangeParam('theme', theme)}
+        value={filters?.theme}
+        onChange={(theme) => onChangeFilter('theme', theme)}
       />
       <GroupSelect
         label="TIME"
         options={times}
-        defaultValue={getParam('time') ?? 'latest'}
-        onChange={(time) => onChangeParam('time', time)}
+        value={filters?.time}
+        onChange={(time) => onChangeFilter('time', time)}
       />
       <GroupSelect
         label="PRICE"
         options={prices}
-        defaultValue={getParam('price') ?? 'low-to-high'}
-        onChange={(price) => onChangeParam('price', price)}
+        value={filters?.price}
+        onChange={(price) => onChangeFilter('price', price)}
       />
-      <Action />
+      <Action onResetFilter={onClearFilter} onSearch={onSearchFilter} />
     </div>
   );
 };

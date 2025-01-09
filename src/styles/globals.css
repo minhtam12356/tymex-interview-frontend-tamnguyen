@@ -1,6 +1,8 @@
 :root {
-  --background: #ffffff;
+  --white: #ffffff;
   --foreground: #171717;
+  --blur: #89888b;
+  --border: #3a3841;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -56,7 +58,7 @@ body {
 
 a {
   text-decoration: none;
-  color: white !important;
+  color: var(--white) !important;
 }
 
 .container {
@@ -82,14 +84,29 @@ a {
 }
 
 .ant-typography {
-  color: #ffffff;
+  color: var(--white);
 }
 
-.font-normal {
+.font-16 {
   font-size: 1rem !important;
   font-weight: 500;
 }
 
 .ant-card-body {
   padding: 0 !important;
+}
+
+.ant-select-selector {
+  display: flex;
+  align-items: center;
+  color: var(--white) !important;
+  background: none !important;
+  border-color: var(--border) !important;
+  padding-left: 1rem !important;
+  border-radius: 4px;
+  font-size: 1rem !important;
+}
+
+.ant-select-selection-item {
+  margin-bottom: 2px !important;
 }

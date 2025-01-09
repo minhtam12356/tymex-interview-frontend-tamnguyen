@@ -1,5 +1,7 @@
 import commonStyles from '@/styles/modules/common.module.css';
+import bodyStyles from '@/styles/modules/body.module.css';
 import { Col, Row } from 'antd';
+import { Image } from '@/components/image';
 
 interface IActionProps {
   onResetFilter?: () => void;
@@ -8,9 +10,16 @@ interface IActionProps {
 
 export const Action: React.FC<IActionProps> = ({ onResetFilter, onSearch }) => {
   return (
-    <Row style={{ flexDirection: 'column' }}>
-      <Col>
-        <div onClick={onResetFilter}>Reset filter</div>
+    <Row className={bodyStyles.action}>
+      <Col className={bodyStyles['reset-button']}>
+        <Image
+          className={bodyStyles['reset-icon']}
+          src="/close.svg"
+          alt="close icon"
+        />
+        <div className="font-16" onClick={onResetFilter}>
+          Reset filter
+        </div>
       </Col>
       <Col
         className={commonStyles.button}

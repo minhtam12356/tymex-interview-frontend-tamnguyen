@@ -5,7 +5,7 @@ import React, { useRef } from 'react';
 import commonStyles from '@/styles/modules/common.module.css';
 import bodyStyles from '@/styles/modules/body.module.css';
 import { debounce } from '@/utilities';
-// import { SearchOutlined } from '@ant-design/icons';
+import { Image } from '@/components/image';
 
 interface ISearchProps {
   placeholder?: string;
@@ -39,7 +39,13 @@ export const Search: React.FC<ISearchProps> = ({
         ref={inputRef}
         onKeyUp={onSearchText}
         defaultValue={defaultValue}
-        // prefix={<SearchOutlined style={{ color: '#89888b !important' }} />}
+        prefix={
+          <Image
+            style={{ width: 16, height: 16, marginRight: 8 }}
+            src="/search.svg"
+            alt="search icon"
+          />
+        }
       />
     </div>
   );

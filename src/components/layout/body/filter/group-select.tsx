@@ -1,27 +1,43 @@
 import { Row, Select } from 'antd';
+import bodyStyles from '@/styles/modules/body.module.css';
+import { Image } from '@/components/image';
 
 interface IGroupSelectProps {
   label?: string;
   options: { value: string; label: string }[];
   onChange: (value: string) => void;
   defaultValue?: string;
+  value?: string;
 }
 
 export const GroupSelect: React.FC<IGroupSelectProps> = ({
   label,
   onChange,
   options,
+  value,
   defaultValue,
 }) => {
   return (
-    <Row style={{ flexDirection: 'column' }}>
-      {label ? <Row>{label}</Row> : <></>}
+    <Row className={bodyStyles['group-select']}>
+      {label ? (
+        <Row className={bodyStyles['group-select-label']}>{label}</Row>
+      ) : (
+        <></>
+      )}
       <Row>
         <Select
           defaultValue={defaultValue}
-          style={{ width: 120 }}
+          value={value}
+          className={bodyStyles['group-select-input']}
           onChange={onChange}
           options={options}
+          suffixIcon={
+            <Image
+              style={{ width: 12, height: 12, marginRight: 6 }}
+              src="/dropdown.svg"
+              alt="dropdown icon"
+            />
+          }
         />
       </Row>
     </Row>

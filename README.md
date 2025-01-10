@@ -1,3 +1,36 @@
+Candidate: Tam Nguyen
+
+Link vercel demo: https://tymex-interview-frontend-tamnguyen.vercel.app/
+
+- [Figma Design](https://www.figma.com/design/5vYZWIUgTNJ1Ud7RfV2zq4/Untitled?node-id=0-1&p=f&t=3KzZ6FGXEcKUGC9s-0)
+- [Github Repository](https://github.com/minhtam12356/tymex-interview-frontend-tamnguyen)
+
+UI/UX:
+- [Nextjs](https://nextjs.org/)
+- [Ant Design](https://ant.design/)
+- Supported for Desktop / Tablet / Mobile
+
+Capabilities:
+- Mock data from localhost server Nextjs ([marketplaces API](https://github.com/minhtam12356/tymex-interview-frontend-tamnguyen/blob/develop/src/app/api/market-places/route.ts))
+- Search, filter marketplaces
+- Load more marketplaces
+- Handle:
+  + No data response
+  + Load more end
+  + Error when call API
+- System can auto refresh data after 60 seconds
+
+Development: 
+- Typescript
+- Lazy Loading
+- Skeleton Loading
+- Custom hook ([useChangeParam](https://github.com/minhtam12356/tymex-interview-frontend-tamnguyen/blob/develop/src/hook/useChangeParam.tsx))
+-  Higher Order Function ([debounce](https://github.com/minhtam12356/tymex-interview-frontend-tamnguyen/blob/develop/src/utilities/index.ts))
+
+Code Styling:
+- Eslint
+- Prettier
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -28,9 +61,3 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

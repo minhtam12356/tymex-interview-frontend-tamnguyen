@@ -2,6 +2,7 @@ import bodyStyles from '@/styles/modules/body.module.css';
 import { getGradient } from '@/utilities';
 import { Image } from '@/components/image';
 import { Space } from 'antd';
+import { Box } from '@/components/box';
 
 export const CharacterCardAvatar = (props: {
   id: number;
@@ -15,15 +16,15 @@ export const CharacterCardAvatar = (props: {
       style={{ background: getGradient(type) }}
       className={bodyStyles['character-card-avatar']}
     >
-      <div className={bodyStyles['character-card-avatar-header']}>
-        <div className={bodyStyles['card-type']}>{type}</div>
-        <div className={bodyStyles.love}>
+      <Box className={bodyStyles['character-card-avatar-header']}>
+        <Box className={bodyStyles['card-type']}>{type}</Box>
+        <Box className={bodyStyles.love}>
           <Image src="/love.svg" alt="love icon" />
-        </div>
-      </div>
-      <div className={bodyStyles.avatar}>
+        </Box>
+      </Box>
+      <Box className={bodyStyles.avatar}>
         <Image src={image} alt={`${id} ${type}`} />
-      </div>
+      </Box>
     </Space>
   );
 };

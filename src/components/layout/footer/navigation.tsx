@@ -1,19 +1,19 @@
 'use client';
 
-import React from 'react';
-import { Col, Row, Space } from 'antd';
+import { Box } from '@/components/box';
 import { droneFont } from '@/styles/font';
 import footerStyles from '@/styles/modules/footer.module.css';
+import { Col, Row, Space } from 'antd';
 
 export const Navigation = () => {
   return (
     <Space direction="vertical">
-      <div
+      <Box
         className={`${droneFont.className} ${footerStyles['information-title']}`}
       >
         NAVIGATION
-      </div>
-      <Row gutter={50}>
+      </Box>
+      <Row gutter={50} className={footerStyles.navigation}>
         <Col className="font-16">
           <p>Home</p>
           <p>About us</p>

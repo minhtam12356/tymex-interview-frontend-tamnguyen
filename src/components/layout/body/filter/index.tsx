@@ -1,94 +1,28 @@
 'use client';
 
-import { GroupSelect } from './group-select';
-import { PriceSlider } from './price-slider';
-import { Search } from './search';
-import tiers from '@/data/tier.json';
-import themes from '@/data/theme.json';
-import times from '@/data/time.json';
-import prices from '@/data/price.json';
-import { Action } from './action';
+import { Box } from '@/components/box';
 import { useChangeParam } from '@/hook/useChangeParam';
-import React from 'react';
-
-const defaultFilters = {
-  tier: 'all',
-  theme: 'halloween',
-  time: 'latest',
-  price: 'low-to-high',
-};
+import { ExpandFilter } from './expand-filter';
+import { GroupSearch } from './group-search';
+import { Search } from './search';
+import bodyStyles from '@/styles/modules/body.module.css';
 
 export const Filter = () => {
-  const { onChangeParams, onChangeParam, getParam } = useChangeParam();
-  const [filters, setFilters] = React.useState<typeof defaultFilters>({
-    tier: '',
-    theme: '',
-    time: '',
-    price: '',
-  });
+  const { onChangeParam, getParam } = useChangeParam();
 
   const onSearchText = (text: string) => {
     onChangeParam('text', text);
   };
 
-  const onChangeFilter = (key: string, value: string) => {
-    setFilters((prevFilter) => {
-      return {
-        ...prevFilter,
-        [key]: value,
-      };
-    });
-  };
-
-  const onClearFilter = () => {
-    onChangeParams(defaultFilters);
-    setFilters(defaultFilters);
-  };
-
-  const onSearchFilter = () => {
-    onChangeParams(filters);
-  };
-
-  React.useEffect(() => {
-    const currentParams = {
-      tier: getParam('tier') ?? 'all',
-      theme: getParam('theme') ?? 'halloween',
-      time: getParam('time') ?? 'latest',
-      price: getParam('price') ?? 'low-to-high',
-    };
-
-    setFilters(currentParams);
-  }, []);
-
   return (
-    <div>
-      <Search onSearch={onSearchText} defaultValue={getParam('text') ?? ''} />
-      <PriceSlider />
-      <GroupSelect
-        label="TIER"
-        options={tiers}
-        value={filters?.tier}
-        onChange={(tier) => onChangeFilter('tier', tier)}
-      />
-      <GroupSelect
-        label="THEME"
-        options={themes}
-        value={filters?.theme}
-        onChange={(theme) => onChangeFilter('theme', theme)}
-      />
-      <GroupSelect
-        label="TIME"
-        options={times}
-        value={filters?.time}
-        onChange={(time) => onChangeFilter('time', time)}
-      />
-      <GroupSelect
-        label="PRICE"
-        options={prices}
-        value={filters?.price}
-        onChange={(price) => onChangeFilter('price', price)}
-      />
-      <Action onResetFilter={onClearFilter} onSearch={onSearchFilter} />
-    </div>
+    <Box>
+      <Box className={bodyStyles['group-filter-search']}>
+        <ExpandFilter />
+        <Search onSearch={onSearchText} defaultValue={getParam('text') ?? ''} />
+      </Box>
+      <Box className="hide-under-1440">
+        <GroupSearch />
+      </Box>
+    </Box>
   );
 };

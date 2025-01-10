@@ -1,21 +1,22 @@
 import React from 'react';
 import styles from '@/styles/modules/information.module.css';
 import { Image } from '@/components/image';
+import { Box } from '@/components/box';
 
 const CharactersBanner = () => {
   return (
-    <div style={{ paddingTop: '10rem' }}>
+    <Box style={{ paddingTop: '10rem' }}>
       <Image src="/characters-banner.svg" alt="characters banner" />
-    </div>
+    </Box>
   );
 };
 
 export const Information = () => {
   return (
-    <div className={styles.main}>
-      <div style={{ background: '#000000b3', position: 'relative' }}>
+    <Box className={styles.main}>
+      <Box style={{ background: '#000000b3', position: 'relative' }}>
         <CharactersBanner />
-      </div>
-    </div>
+      </Box>
+    </Box>
   );
 };

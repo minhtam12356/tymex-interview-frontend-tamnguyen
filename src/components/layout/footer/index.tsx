@@ -1,10 +1,11 @@
-import React from 'react';
-import { Col, Divider, Row } from 'antd';
-import { Navigation } from './navigation';
-import { ContactUs } from './contact-us';
-import { Subscribe } from './subscribe';
-import { CopyWriter } from './copywriter';
+import { Box } from '@/components/box';
 import footerStyles from '@/styles/modules/footer.module.css';
+import { Col, Divider, Row } from 'antd';
+import React from 'react';
+import { ContactUs } from './contact-us';
+import { CopyWriter } from './copywriter';
+import { Navigation } from './navigation';
+import { Subscribe } from './subscribe';
 
 interface IFooterProps {
   className?: string;
@@ -13,7 +14,7 @@ interface IFooterProps {
 export const Footer: React.FC<IFooterProps> = () => {
   return (
     <footer>
-      <div className="container">
+      <Box className="container">
         <Row className={footerStyles['pre-footer']}>
           <Col>
             <Navigation />
@@ -29,7 +30,7 @@ export const Footer: React.FC<IFooterProps> = () => {
         <Divider style={{ marginTop: '2rem', marginBottom: '3rem' }} />
 
         <CopyWriter />
-      </div>
+      </Box>
     </footer>
   );
 };

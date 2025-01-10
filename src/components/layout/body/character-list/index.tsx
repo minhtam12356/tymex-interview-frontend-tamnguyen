@@ -9,6 +9,7 @@ import { useChangeParam } from '@/hook/useChangeParam';
 import { useSearchParams } from 'next/navigation';
 import { CardSkeleton } from './card-skeleton';
 import { ViewMoreButton } from './view-more-button';
+import { Box } from '@/components/box';
 
 export const CharacterList = () => {
   const [characters, setCharacters] = React.useState<ICharacter[]>([]);
@@ -77,7 +78,7 @@ export const CharacterList = () => {
   }
 
   return (
-    <div>
+    <Box>
       <Row className={bodyStyles['character-list']}>
         {characters?.length
           ? characters?.map((character) => (
@@ -102,6 +103,6 @@ export const CharacterList = () => {
           onLoadMore={getMoreCharacters}
         />
       </Row>
-    </div>
+    </Box>
   );
 };

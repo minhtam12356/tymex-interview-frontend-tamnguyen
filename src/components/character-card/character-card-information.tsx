@@ -4,6 +4,7 @@ import bodyStyles from '@/styles/modules/body.module.css';
 import { Tooltip } from 'antd';
 import { AuthorAvatar } from './author-avatar';
 import { formatPrice } from '@/utilities';
+import { Box } from '@/components/box';
 
 export const CharacterCardInformation = (props: {
   name: string;
@@ -13,20 +14,20 @@ export const CharacterCardInformation = (props: {
 }) => {
   const { name, price, unit, author } = props;
   return (
-    <div className={bodyStyles['character-information']}>
+    <Box className={bodyStyles['character-information']}>
       {/* Header */}
-      <div className={bodyStyles['character-information-header']}>
-        <div className={bodyStyles['character-information-name']}>
+      <Box className={bodyStyles['character-information-header']}>
+        <Box className={bodyStyles['character-information-name']}>
           <Tooltip placement="topLeft" title={name}>
             {name}
           </Tooltip>
-        </div>
+        </Box>
 
         {/* Price */}
-        <div className={bodyStyles.cost}>
-          <div className={bodyStyles.unit}>
+        <Box className={bodyStyles.cost}>
+          <Box className={bodyStyles.unit}>
             <Image src="/ethereum.svg" alt="ethereum icon" />
-          </div>
+          </Box>
           <Tooltip
             placement="topLeft"
             title={formatPrice(price)}
@@ -34,19 +35,19 @@ export const CharacterCardInformation = (props: {
           >
             {formatPrice(price)}
           </Tooltip>{' '}
-          <div style={{ color: 'white' }}>{unit}</div>
-        </div>
-      </div>
+          <Box className="font-white">{unit}</Box>
+        </Box>
+      </Box>
 
       {/* Author */}
-      <div className={bodyStyles['character-information-author']}>
+      <Box className={bodyStyles['character-information-author']}>
         <AuthorAvatar author={author} />
-        <div className={bodyStyles['character-information-author-name']}>
+        <Box className={bodyStyles['character-information-author-name']}>
           <Tooltip placement="topLeft" title={author.name}>
             {author.name}
           </Tooltip>
-        </div>
-      </div>
-    </div>
+        </Box>
+      </Box>
+    </Box>
   );
 };

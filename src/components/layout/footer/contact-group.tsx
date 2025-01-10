@@ -1,4 +1,5 @@
 import React from 'react';
+import { Box } from '@/components/box';
 
 export const ContactGroup = (props: {
   href?: string;
@@ -8,10 +9,10 @@ export const ContactGroup = (props: {
   const { href, label, icon } = props;
 
   return (
-    <div
+    <Box
       style={{ display: 'flex', alignItems: 'center', marginBottom: '2rem' }}
     >
-      <div
+      <Box
         style={{
           width: 16,
           height: 16,
@@ -21,8 +22,8 @@ export const ContactGroup = (props: {
         }}
       >
         {icon}
-      </div>
+      </Box>
       <a href={href}>{label}</a>
-    </div>
+    </Box>
   );
 };

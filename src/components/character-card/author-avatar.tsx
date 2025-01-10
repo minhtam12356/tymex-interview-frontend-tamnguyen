@@ -3,12 +3,13 @@ import { IAuthor } from '@/common';
 import { Image } from '@/components/image';
 import { UserOutlined } from '@ant-design/icons';
 import bodyStyles from '@/styles/modules/body.module.css';
+import { Box } from '@/components/box';
 
 export const AuthorAvatar = (props: { author: IAuthor }) => {
   const { author } = props;
 
   return (
-    <div className={bodyStyles['character-information-author-avatar']}>
+    <Box className={bodyStyles['character-information-author-avatar']}>
       <Avatar
         icon={
           author?.avatar ? (
@@ -22,13 +23,13 @@ export const AuthorAvatar = (props: { author: IAuthor }) => {
           )
         }
       />
-      <div className={bodyStyles['character-information-author-verify']}>
+      <Box className={bodyStyles['character-information-author-verify']}>
         <Image
           style={{ width: 12, height: 12 }}
           src={author?.verified ? '/verified-green.svg' : '/verified-red.svg'}
           alt={author.name}
         />
-      </div>
-    </div>
+      </Box>
+    </Box>
   );
 };

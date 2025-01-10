@@ -1,5 +1,6 @@
 'use client';
 
+import { Box } from '@/components/box';
 import { droneFont } from '@/styles/font';
 import commonStyles from '@/styles/modules/common.module.css';
 import footerStyles from '@/styles/modules/footer.module.css';
@@ -8,11 +9,11 @@ import { Col, Input, Row, Space } from 'antd';
 export const Subscribe = () => {
   return (
     <Space direction="vertical">
-      <div
+      <Box
         className={`${droneFont.className} ${footerStyles['information-title']}`}
       >
         SUBSCRIBE TO RECEIVE OUR LATEST UPDATE
-      </div>
+      </Box>
 
       <Row style={{ display: 'flex', flexWrap: 'nowrap' }}>
         <Col style={{ width: '100%' }}>

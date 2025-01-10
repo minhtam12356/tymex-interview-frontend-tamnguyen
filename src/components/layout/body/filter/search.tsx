@@ -32,21 +32,19 @@ export const Search: React.FC<ISearchProps> = ({
   };
 
   return (
-    <div className="">
-      <Input
-        className={`${commonStyles.input} ${bodyStyles['search-input']}`}
-        placeholder={placeholder}
-        ref={inputRef}
-        onKeyUp={onSearchText}
-        defaultValue={defaultValue}
-        prefix={
-          <Image
-            style={{ width: 16, height: 16, marginRight: 8 }}
-            src="/search.svg"
-            alt="search icon"
-          />
-        }
-      />
-    </div>
+    <Input
+      className={`${commonStyles.input} ${bodyStyles['search-input']}`}
+      placeholder={placeholder}
+      ref={inputRef}
+      onKeyUp={onSearchText}
+      defaultValue={defaultValue}
+      prefix={
+        <Image
+          style={{ width: 16, height: 16, marginRight: 8 }}
+          src="/search.svg"
+          alt="search icon"
+        />
+      }
+    />
   );
 };

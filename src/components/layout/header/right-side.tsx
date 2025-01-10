@@ -1,15 +1,15 @@
 'use client';
 
-import React from 'react';
+import { Box } from '@/components/box';
+import { Image } from '@/components/image';
 import commonStyles from '@/styles/modules/common.module.css';
 import headerStyles from '@/styles/modules/header.module.css';
 import { Col, Dropdown, MenuProps, Row, Space } from 'antd';
-import { Image } from '@/components/image';
 
 const items: MenuProps['items'] = [
   {
     key: '0',
-    label: <div style={{ color: 'black' }}>English</div>,
+    label: <Box className="font-black">English</Box>,
   },
 ];
 

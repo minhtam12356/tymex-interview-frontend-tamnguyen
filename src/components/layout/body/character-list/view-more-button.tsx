@@ -1,5 +1,7 @@
 import commonStyles from '@/styles/modules/common.module.css';
+import bodyStyles from '@/styles/modules/body.module.css';
 import { Spin } from 'antd';
+import { Box } from '@/components/box';
 
 interface IViewMoreButtonProps {
   onLoadMore: () => void;
@@ -15,20 +17,19 @@ export const ViewMoreButton: React.FC<IViewMoreButtonProps> = ({
   hidden,
 }) => {
   if (hidden) {
-    return <></>
+    return <></>;
   }
 
   if (isEndList) {
-    return <div>End!</div>;
+    return <Box>End!</Box>;
   }
 
   return (
-    <div
-      className={`font-16 ${commonStyles.button}`}
-      style={{ width: '20rem', height: '4.375rem' }}
+    <Box
+      className={`font-16 ${commonStyles.button} ${bodyStyles['view-more-button']}`}
       onClick={onLoadMore}
     >
       {loading ? <Spin /> : 'View more'}
-    </div>
+    </Box>
   );
 };

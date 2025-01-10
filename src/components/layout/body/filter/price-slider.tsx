@@ -5,6 +5,7 @@ import React from 'react';
 import { useChangeParam } from '@/hook/useChangeParam';
 // import { SliderOutlined } from '@ant-design/icons';
 import bodyStyles from '@/styles/modules/body.module.css';
+import { Box } from '@/components/box';
 
 interface IPriceSliderProps {
   name?: string;
@@ -21,8 +22,10 @@ export const PriceSlider: React.FC<IPriceSliderProps> = ({}) => {
   };
 
   return (
-    <div className={bodyStyles['slider-container']}>
-      <div className={`font-16 ${bodyStyles['slider-label']}`}>PRICE</div>
+    <Box className={bodyStyles['slider-container']}>
+      <Box className={`font-16 font-white ${bodyStyles['slider-label']}`}>
+        PRICE
+      </Box>
       <Slider
         className={bodyStyles.slider}
         tooltip={{
@@ -30,9 +33,6 @@ export const PriceSlider: React.FC<IPriceSliderProps> = ({}) => {
           className: 'slider-range-custom',
           formatter: (value) => `${value} ETH`,
           open: true,
-          style: {
-            background: 'red !important',
-          },
         }}
         styles={{
           rail: { background: 'var(--border)', height: 8 },
@@ -42,7 +42,7 @@ export const PriceSlider: React.FC<IPriceSliderProps> = ({}) => {
             height: 8,
           },
           handle: {
-            boxShadow: '0px 0px 16px 3px #da40a387',
+            boxShadow: '0 0 1rem 0.1875rem #da40a387',
           },
         }}
         range
@@ -58,6 +58,6 @@ export const PriceSlider: React.FC<IPriceSliderProps> = ({}) => {
         <Col className="font-16">0.01 ETH</Col>
         <Col className="font-16">1000 ETH</Col>
       </Row>
-    </div>
+    </Box>
   );
 };

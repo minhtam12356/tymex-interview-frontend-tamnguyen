@@ -2,6 +2,7 @@ import commonStyles from '@/styles/modules/common.module.css';
 import bodyStyles from '@/styles/modules/body.module.css';
 import { Col, Row } from 'antd';
 import { Image } from '@/components/image';
+import { Box } from '@/components/box';
 
 interface IActionProps {
   onResetFilter?: () => void;
@@ -17,9 +18,9 @@ export const Action: React.FC<IActionProps> = ({ onResetFilter, onSearch }) => {
           src="/close.svg"
           alt="close icon"
         />
-        <div className="font-16" onClick={onResetFilter}>
+        <Box className="font-16 font-white" onClick={onResetFilter}>
           Reset filter
-        </div>
+        </Box>
       </Col>
       <Col
         className={commonStyles.button}

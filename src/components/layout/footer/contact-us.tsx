@@ -1,19 +1,20 @@
 'use client';
 
+import { Box } from '@/components/box';
+import { Image } from '@/components/image';
 import { droneFont } from '@/styles/font';
 import footerStyles from '@/styles/modules/footer.module.css';
 import { Col, Row, Space } from 'antd';
-import { Image } from '@/components/image';
 import { ContactGroup } from './contact-group';
 
 export const ContactUs = () => {
   return (
     <Space direction="vertical">
-      <div
+      <Box
         className={`${droneFont.className} ${footerStyles['information-title']}`}
       >
         CONTACT US
-      </div>
+      </Box>
       <Row gutter={50}>
         <Col className="font-16">
           <ContactGroup

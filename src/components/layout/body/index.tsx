@@ -5,10 +5,11 @@ import { Filter } from './filter';
 import { Col, Row } from 'antd';
 import { SubFilter } from './sub-filter';
 import { CharacterList } from './character-list';
+import { Box } from '@/components/box';
 
 export const Body = () => {
   return (
-    <div className={bodyStyles.main}>
+    <Box className={bodyStyles.main}>
       <Row className={`container ${bodyStyles.container}`}>
         <Col className={bodyStyles.filter}>
           <Filter />
@@ -19,6 +20,6 @@ export const Body = () => {
         </Col>
       </Row>
       <PreFooterBackground />
-    </div>
+    </Box>
   );
 };

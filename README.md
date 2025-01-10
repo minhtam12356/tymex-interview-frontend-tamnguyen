@@ -6,13 +6,11 @@ Link vercel demo: https://tymex-interview-frontend-tamnguyen.vercel.app/
 - [Github Repository](https://github.com/minhtam12356/tymex-interview-frontend-tamnguyen)
 
 UI/UX:
-
 - [Nextjs](https://nextjs.org/)
 - [Ant Design](https://ant.design/)
 - Supported for Desktop / Tablet / Mobile
 
 Capabilities:
-
 - Mock data from localhost server Nextjs ([marketplaces API](https://github.com/minhtam12356/tymex-interview-frontend-tamnguyen/blob/develop/src/app/api/market-places/route.ts))
 - Search, filter marketplaces
 - Load more marketplaces
@@ -23,7 +21,6 @@ Capabilities:
 - System can auto refresh data after 60 seconds
 
 Development:
-
 - Typescript
 - Lazy Loading
 - Skeleton Loading
@@ -31,12 +28,10 @@ Development:
 - Higher Order Function ([debounce](https://github.com/minhtam12356/tymex-interview-frontend-tamnguyen/blob/develop/src/utilities/index.ts))
 
 Code Quality:
-
 - Unit Test
 - Integration Test
 
 Code Styling:
-
 - Eslint
 - Prettier
 

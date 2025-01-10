@@ -5,14 +5,14 @@ import { DEFAULT_LIMIT } from '@/common';
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
 
-  const limit = +(searchParams.get('limit') ?? DEFAULT_LIMIT);
-  const offset = +(searchParams.get('offset') ?? 0);
-  const text = searchParams.get('text') ?? '';
-  const priceStart = +(searchParams.get('priceStart') ?? 0);
-  const priceEnd = +(searchParams.get('priceEnd') ?? 0);
-  const tier = searchParams.get('tier') ?? '';
-  const time = searchParams.get('time') ?? '';
-  const price = searchParams.get('price');
+  const limit = +(searchParams?.get('limit') ?? DEFAULT_LIMIT);
+  const offset = +(searchParams?.get('offset') ?? 0);
+  const text = searchParams?.get('text') ?? '';
+  const priceStart = +(searchParams?.get('priceStart') ?? 0);
+  const priceEnd = +(searchParams?.get('priceEnd') ?? 0);
+  const tier = searchParams?.get('tier') ?? '';
+  const time = searchParams?.get('time') ?? '';
+  const price = searchParams?.get('price');
 
   const start = offset;
   const end = offset + limit;

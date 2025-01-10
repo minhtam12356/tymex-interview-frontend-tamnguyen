@@ -30,7 +30,7 @@ export const CharacterCardInformation = (props: {
           </Box>
           <Tooltip
             placement="topLeft"
-            title={formatPrice(price)}
+            title={`${formatPrice(price)} ${unit}`}
             className={bodyStyles.price}
           >
             {formatPrice(price)}

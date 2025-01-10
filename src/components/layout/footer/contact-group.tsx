@@ -10,9 +10,7 @@ export const ContactGroup = (props: {
   const { href, label, icon } = props;
 
   return (
-    <Box
-      className={footerStyles['contact-group']}
-    >
+    <Box className={footerStyles['contact-group']}>
       <Box
         style={{
           width: 16,

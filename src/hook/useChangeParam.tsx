@@ -14,7 +14,7 @@ export const useChangeParam = () => {
   };
 
   const getParam = (key: string) => {
-    return searchParams.get(key);
+    return searchParams?.get(key);
   };
 
   const onChangeParam = (key: string, value: string) => {

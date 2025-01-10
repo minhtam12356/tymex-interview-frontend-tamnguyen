@@ -14,7 +14,7 @@ export const getGradient = (type: string) => {
     legendary: 'linear-gradient(90.13deg, #FE955A 0%, #F1DA63 100%)',
     mythic: 'linear-gradient(90.13deg, #FE5A5A 0%, #F163D2 100%)',
   };
-  return gradients[type];
+  return gradients[type] ?? '';
 };
 
 export const formatPrice = (price: number) => {

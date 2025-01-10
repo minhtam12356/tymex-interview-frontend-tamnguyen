@@ -40,7 +40,7 @@ export const CharacterList = () => {
       const response = await fetch(`/api/market-places?${queryParams}`);
 
       if (response?.status >= 300) {
-        throw Error('Error when call /api/market-places')
+        throw Error('Error when call /api/market-places');
       }
 
       const jsonData = await response?.json();
@@ -56,7 +56,7 @@ export const CharacterList = () => {
       api.error({
         message: error?.message,
         placement: 'bottomLeft',
-      })
+      });
     } finally {
       setIsLoading(false);
     }
@@ -75,7 +75,7 @@ export const CharacterList = () => {
       const response = await fetch(`/api/market-places?${queryParams}`);
 
       if (response?.status >= 300) {
-        throw Error('Error when call /api/market-places')
+        throw Error('Error when call /api/market-places');
       }
 
       const jsonData = await response.json();
@@ -90,7 +90,7 @@ export const CharacterList = () => {
       api.error({
         message: error?.message,
         placement: 'bottomLeft',
-      })
+      });
     } finally {
       setIsLoadingViewMore(false);
     }
@@ -122,11 +122,13 @@ export const CharacterList = () => {
     <Box>
       {contextHolder}
       <Row className={bodyStyles['character-list']}>
-        {characters?.length
-          ? characters?.map((character) => (
+        {characters?.length ? (
+          characters?.map((character) => (
             <CharacterCard key={character.id} information={character} />
           ))
-          : <Box className='font-16'>No data!</Box>}
+        ) : (
+          <Box className="font-16">No data!</Box>
+        )}
         {isLoadingViewMore ? <CardSkeleton /> : <></>}
       </Row>
 

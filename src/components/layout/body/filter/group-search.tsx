@@ -5,7 +5,6 @@ import times from '@/data/time.json';
 import prices from '@/data/price.json';
 import { Action } from './action';
 import { GroupSelect } from './group-select';
-import { PriceSlider } from './price-slider';
 import { useChangeParam } from '@/hook/useChangeParam';
 import { Box } from '@/components/box';
 
@@ -56,7 +55,6 @@ export const GroupSearch = () => {
 
   return (
     <Box>
-      <PriceSlider />
       <GroupSelect
         label="TIER"
         options={tiers}

@@ -6,6 +6,7 @@ import { ExpandFilter } from './expand-filter';
 import { GroupSearch } from './group-search';
 import { Search } from './search';
 import bodyStyles from '@/styles/modules/body.module.css';
+import { PriceSlider } from './price-slider';
 
 export const Filter = () => {
   const { onChangeParam, getParam } = useChangeParam();
@@ -20,6 +21,7 @@ export const Filter = () => {
         <ExpandFilter />
         <Search onSearch={onSearchText} defaultValue={getParam('text') ?? ''} />
       </Box>
+      <PriceSlider />
       <Box className="hide-under-1440">
         <GroupSearch />
       </Box>

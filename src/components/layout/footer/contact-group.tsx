@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box } from '@/components/box';
+import footerStyles from '@/styles/modules/footer.module.css';
 
 export const ContactGroup = (props: {
   href?: string;
@@ -10,7 +11,7 @@ export const ContactGroup = (props: {
 
   return (
     <Box
-      style={{ display: 'flex', alignItems: 'center', marginBottom: '2rem' }}
+      className={footerStyles['contact-group']}
     >
       <Box
         style={{

@@ -21,7 +21,7 @@ export const ViewMoreButton: React.FC<IViewMoreButtonProps> = ({
   }
 
   if (isEndList) {
-    return <Box>End!</Box>;
+    return <Box className='font-16'>End!</Box>;
   }
 
   return (

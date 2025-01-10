@@ -18,7 +18,7 @@ header {
 
 footer {
   padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-bottom: 4rem;
   background: #17161a;
   min-height: 550px;
 
@@ -203,6 +203,10 @@ a {
 
 .ant-modal-close-x svg {
   fill: #da34dd;
+}
+
+.ant-tooltip {
+  z-index: 999 !important;
 }
 
 @media (max-width: 1440px) {

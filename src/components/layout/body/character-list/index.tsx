@@ -3,7 +3,7 @@
 import { CharacterCard } from '@/components/character-card';
 import React from 'react';
 import { DEFAULT_LIMIT, ICharacter } from '@/common';
-import { Row } from 'antd';
+import { notification, Row } from 'antd';
 import bodyStyles from '@/styles/modules/body.module.css';
 import { useChangeParam } from '@/hook/useChangeParam';
 import { useSearchParams } from 'next/navigation';
@@ -18,6 +18,7 @@ export const CharacterList = () => {
   const [isEndList, setIsEndList] = React.useState(true);
   const { getParams } = useChangeParam();
   const searchParams = useSearchParams();
+  const [api, contextHolder] = notification.useNotification();
 
   const getQueryObject = () => {
     const queryObject = getParams();
@@ -35,17 +36,30 @@ export const CharacterList = () => {
     const queryObject = getQueryObject();
     const queryParams = new URLSearchParams(queryObject).toString();
 
-    const response = await fetch(`/api/market-places?${queryParams}`);
-    const jsonData = await response.json();
+    try {
+      const response = await fetch(`/api/market-places?${queryParams}`);
 
-    if (jsonData?.total === jsonData?.data?.length) {
-      setIsEndList(true);
-    } else {
-      setIsEndList(false);
+      if (response?.status >= 300) {
+        throw Error('Error when call /api/market-places')
+      }
+
+      const jsonData = await response?.json();
+
+      if (jsonData?.total === jsonData?.data?.length) {
+        setIsEndList(true);
+      } else {
+        setIsEndList(false);
+      }
+
+      setCharacters(jsonData?.data);
+    } catch (error: any) {
+      api.error({
+        message: error?.message,
+        placement: 'bottomLeft',
+      })
+    } finally {
+      setIsLoading(false);
     }
-
-    setCharacters(jsonData?.data);
-    setIsLoading(false);
   };
 
   const getMoreCharacters = async () => {
@@ -57,20 +71,47 @@ export const CharacterList = () => {
 
     const queryParams = new URLSearchParams(queryObject).toString();
 
-    const response = await fetch(`/api/market-places?${queryParams}`);
-    const jsonData = await response.json();
-    const newCharacters = [...characters, ...jsonData?.data];
+    try {
+      const response = await fetch(`/api/market-places?${queryParams}`);
 
-    if (jsonData?.total === newCharacters?.length) {
-      setIsEndList(true);
+      if (response?.status >= 300) {
+        throw Error('Error when call /api/market-places')
+      }
+
+      const jsonData = await response.json();
+      const newCharacters = [...characters, ...jsonData?.data];
+
+      if (jsonData?.total === newCharacters?.length) {
+        setIsEndList(true);
+      }
+
+      setCharacters(newCharacters);
+    } catch (error: any) {
+      api.error({
+        message: error?.message,
+        placement: 'bottomLeft',
+      })
+    } finally {
+      setIsLoadingViewMore(false);
     }
-
-    setCharacters(newCharacters);
-    setIsLoadingViewMore(false);
   };
 
+  // Get marketplaces when mounted
   React.useEffect(() => {
     getCharacters();
+  }, [searchParams]);
+
+  // System can auto refresh data after 60 seconds
+  React.useEffect(() => {
+    let interval;
+
+    // eslint-disable-next-line prefer-const
+    interval = setInterval(() => {
+      getCharacters();
+    }, 60000);
+    return () => {
+      clearInterval(interval);
+    };
   }, [searchParams]);
 
   if (isLoading) {
@@ -79,12 +120,13 @@ export const CharacterList = () => {
 
   return (
     <Box>
+      {contextHolder}
       <Row className={bodyStyles['character-list']}>
         {characters?.length
           ? characters?.map((character) => (
-              <CharacterCard key={character.id} information={character} />
-            ))
-          : 'No data!'}
+            <CharacterCard key={character.id} information={character} />
+          ))
+          : <Box className='font-16'>No data!</Box>}
         {isLoadingViewMore ? <CardSkeleton /> : <></>}
       </Row>
 

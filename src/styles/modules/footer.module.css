@@ -23,6 +23,12 @@
   justify-content: space-between;
 }
 
+.contact-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
 @media (max-width: 1440px) {
   .container {
     flex-direction: column-reverse !important;
@@ -34,14 +40,9 @@
     justify-content: center;
   }
 
-  /* .navigation {
-    flex-direction: column !important;
-    
-    & div {
-      display: flex !important;
-      flex-direction: column !important;
-    }
-  } */
+  .contact-group {
+    margin-bottom: 1rem;
+  }
 
   .extra {
     justify-content: center;

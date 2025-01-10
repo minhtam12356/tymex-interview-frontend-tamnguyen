@@ -1,11 +1,12 @@
 import React from 'react';
 import styles from '@/styles/modules/information.module.css';
+import informationStyles from '@/styles/modules/information.module.css';
 import { Image } from '@/components/image';
 import { Box } from '@/components/box';
 
 const CharactersBanner = () => {
   return (
-    <Box style={{ paddingTop: '10rem' }}>
+    <Box className={informationStyles['characters-banner']}>
       <Image src="/characters-banner.svg" alt="characters banner" />
     </Box>
   );

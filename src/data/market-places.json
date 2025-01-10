@@ -1030,7 +1030,7 @@
     "id": 80,
     "name": "Assassin",
     "type": "mythic",
-    "price": 2.75,
+    "price": 22,
     "image": "/characters/assassin.png",
     "unit": "ETH",
     "author": {
@@ -1095,7 +1095,7 @@
     "id": 85,
     "name": "Bassketball Girl",
     "type": "epic",
-    "price": 2.75,
+    "price": 33,
     "image": "/characters/basketball-girl.png",
     "unit": "ETH",
     "author": {
@@ -1134,7 +1134,7 @@
     "id": 88,
     "name": "Mafia England",
     "type": "rare",
-    "price": 2.75,
+    "price": 44,
     "image": "/characters/mafia-england.png",
     "unit": "ETH",
     "author": {
@@ -1212,7 +1212,7 @@
     "id": 94,
     "name": "Neon Guy",
     "type": "epic",
-    "price": 2.75,
+    "price": 400.75,
     "image": "/characters/neon-guy.png",
     "unit": "ETH",
     "author": {
@@ -1264,7 +1264,7 @@
     "id": 98,
     "name": "Bassketball Girl",
     "type": "legendary",
-    "price": 2.75,
+    "price": 12,
     "image": "/characters/basketball-girl.png",
     "unit": "ETH",
     "author": {
@@ -1277,7 +1277,7 @@
     "id": 99,
     "name": "Neon Guy",
     "type": "legendary",
-    "price": 2.75,
+    "price": 15,
     "image": "/characters/neon-guy.png",
     "unit": "ETH",
     "author": {

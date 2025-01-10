@@ -91,7 +91,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  width: 10rem;
+  width: 16rem;
   color: var(--white);
 }
 
@@ -251,7 +251,6 @@
 .group-filter-search {
   display: flex;
   align-items: center;
-  margin-bottom: 2rem;
 }
 
 @media (max-width: 768px) {
@@ -278,6 +277,11 @@
     min-width: unset !important;
     margin: 0 !important;
     width: 100%;
+  }
+
+  .slider-container {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 
   .view-more-button {

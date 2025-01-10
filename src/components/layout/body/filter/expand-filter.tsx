@@ -28,6 +28,8 @@ export const ExpandFilter = () => {
     const params = getParams();
     delete params['page'];
     delete params['text'];
+    delete params['priceStart'];
+    delete params['priceEnd'];
 
     return Object.keys(params).length;
   }, [searchParams]);
@@ -40,8 +42,6 @@ export const ExpandFilter = () => {
       </Box>
 
       <Modal
-        styles={{ body: { background: 'black !important' } }}
-        title="Search"
         open={isModalOpen}
         onOk={handleOk}
         onCancel={handleCancel}

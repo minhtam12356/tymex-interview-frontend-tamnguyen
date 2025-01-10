@@ -8,6 +8,7 @@ Link vercel demo: https://tymex-interview-frontend-tamnguyen.vercel.app/
 UI/UX:
 - [Nextjs](https://nextjs.org/)
 - [Ant Design](https://ant.design/)
+- Vanilla CSS
 - Supported for Desktop / Tablet / Mobile
 
 Capabilities:

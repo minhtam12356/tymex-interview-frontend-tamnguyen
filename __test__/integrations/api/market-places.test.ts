@@ -30,23 +30,27 @@ describe('src/app/api/market-places/route.ts', () => {
   });
 
   // Test query param (Example: tier=common)
-  Promise.all(tiers.map(tier => {
-    const currentTier = tier.value;
+  Promise.all(
+    tiers.map((tier) => {
+      const currentTier = tier.value;
 
-    test('Method GET with query tier', () => {
-      axios.get(
-        `${process.env.BE_URL}/api/market-places?tier=${currentTier}`
-      ).then((response) => {
-        let isMatchTier = true;
-        
-        if (response?.data?.length) {
-          isMatchTier = response?.data?.every((t: { type: string }) => t.type === currentTier);
-        }
-  
-        expect(response?.data).toHaveProperty('total');
-        expect(response?.data).toHaveProperty('data');
-        expect(isMatchTier).toBe(true);
+      test('Method GET with query tier', () => {
+        axios
+          .get(`${process.env.BE_URL}/api/market-places?tier=${currentTier}`)
+          .then((response) => {
+            let isMatchTier = true;
+
+            if (response?.data?.length) {
+              isMatchTier = response?.data?.every(
+                (t: { type: string }) => t.type === currentTier
+              );
+            }
+
+            expect(response?.data).toHaveProperty('total');
+            expect(response?.data).toHaveProperty('data');
+            expect(isMatchTier).toBe(true);
+          });
       });
-    });
-  }))
+    })
+  );
 });

@@ -244,7 +244,7 @@
   margin-right: 2rem;
 
   & svg {
-    fill: var(--white) !important
+    fill: var(--white) !important;
   }
 }
 

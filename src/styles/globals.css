@@ -29,7 +29,6 @@ footer {
 
 html,
 body {
-  /* overflow-x: hidden; */
   margin: 0 auto;
   background: #17161a;
   height: 100vh;
@@ -148,6 +147,10 @@ a {
   ) !important;
 }
 
+.sub-filter {
+  padding-right: 2rem !important;
+}
+
 .sub-filter .ant-tabs-nav {
   margin-bottom: 0 !important;
 }
@@ -188,7 +191,7 @@ a {
   margin-right: 1rem;
   background: linear-gradient(to right, #da34dd00, #1a1532 40%) !important;
   position: absolute !important;
-  right: -1.2rem;
+  right: -3rem;
 }
 
 .ant-modal-title {

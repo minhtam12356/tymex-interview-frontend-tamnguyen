@@ -3,7 +3,6 @@
 import { Col, Row, Slider } from 'antd';
 import React from 'react';
 import { useChangeParam } from '@/hook/useChangeParam';
-// import { SliderOutlined } from '@ant-design/icons';
 import bodyStyles from '@/styles/modules/body.module.css';
 import { Box } from '@/components/box';
 
@@ -29,6 +28,7 @@ export const PriceSlider: React.FC<IPriceSliderProps> = ({}) => {
       <Slider
         className={bodyStyles.slider}
         tooltip={{
+          autoAdjustOverflow: false,
           placement: 'top',
           className: 'slider-range-custom',
           formatter: (value) => `${value} ETH`,

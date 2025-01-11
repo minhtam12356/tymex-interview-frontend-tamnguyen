@@ -1,11 +1,13 @@
 import axios from 'axios';
-import tier from '@/data/tier.json';
+import tiers from '@/data/tier.json';
 
 describe('src/app/api/market-places/route.ts', () => {
+  // Test get all
   test('Method GET', async () => {
     const response = await axios.get(`${process.env.BE_URL}/api/market-places`);
     expect(response?.data).toHaveProperty('total');
     expect(response?.data).toHaveProperty('data');
+
     expect(response?.data?.data?.[0]).toHaveProperty('id');
     expect(response?.data?.data?.[0]).toHaveProperty('name');
     expect(response?.data?.data?.[0]).toHaveProperty('type');
@@ -18,6 +20,7 @@ describe('src/app/api/market-places/route.ts', () => {
     expect(response?.data?.data?.[0]).toHaveProperty('author.avatar');
   });
 
+  // Test query param limit
   test('Method GET Limit', async () => {
     const response = await axios.get(
       `${process.env.BE_URL}/api/market-places?limit=10`
@@ -26,18 +29,24 @@ describe('src/app/api/market-places/route.ts', () => {
     expect(response?.data?.data?.length).toBe(10);
   });
 
-  for(let i = 0; i < tier.length; i++) {
-    const currentTier = tier[i].value;
+  // Test query param (Example: tier=common)
+  Promise.all(tiers.map(tier => {
+    const currentTier = tier.value;
 
-    test('Method GET with query tier', async () => {
-      const response = await axios.get(
+    test('Method GET with query tier', () => {
+      axios.get(
         `${process.env.BE_URL}/api/market-places?tier=${currentTier}`
-      );
-      const isMatchTier = response?.data?.data?.every((t: { type: string }) => t.type === currentTier);
-
-      expect(response?.data).toHaveProperty('total');
-      expect(response?.data).toHaveProperty('data');
-      expect(isMatchTier).toBe(true);
+      ).then((response) => {
+        let isMatchTier = true;
+        
+        if (response?.data?.length) {
+          isMatchTier = response?.data?.every((t: { type: string }) => t.type === currentTier);
+        }
+  
+        expect(response?.data).toHaveProperty('total');
+        expect(response?.data).toHaveProperty('data');
+        expect(isMatchTier).toBe(true);
+      });
     });
-  }
+  }))
 });

@@ -242,6 +242,10 @@
 .filter-icon {
   display: none;
   margin-right: 2rem;
+
+  & svg {
+    fill: var(--white) !important
+  }
 }
 
 .filter-count {

@@ -58,7 +58,7 @@ export const LeftSide = () => {
     <Row className={`${headerStyles['left-side']} ${droneFont.className}`}>
       {headers.map((header) => (
         <Col
-          className={`${headerStyles['header-tabs']} ${page === header.key ? headerStyles.active : ''}`}
+          className={`font-white ${headerStyles['header-tabs']} ${page === header.key ? headerStyles.active : ''}`}
           onClick={() => onChange(header.key)}
           key={header.key}
         >

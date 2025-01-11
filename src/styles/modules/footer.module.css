@@ -6,6 +6,7 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 2rem;
+  color: var(--white) !important;
 }
 
 .information-title {
@@ -34,6 +35,10 @@
   display: flex;
   align-items: center;
   margin-bottom: 2rem;
+}
+
+.copywriter {
+  color: var(--white) !important;
 }
 
 @media (max-width: 1440px) {

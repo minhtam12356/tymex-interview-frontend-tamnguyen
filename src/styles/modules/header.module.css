@@ -60,5 +60,9 @@
 
   .hamburger {
     display: flex;
+
+    & svg {
+      fill: var(--white) !important;
+    }
   }
 }

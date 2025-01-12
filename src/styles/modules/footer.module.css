@@ -58,6 +58,8 @@
 
   .extra {
     justify-content: center;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
   }
 
   .input {

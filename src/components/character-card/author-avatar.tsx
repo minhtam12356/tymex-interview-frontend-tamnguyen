@@ -4,6 +4,7 @@ import { Image } from '@/components/image';
 import { UserOutlined } from '@ant-design/icons';
 import bodyStyles from '@/styles/modules/body.module.css';
 import { Box } from '@/components/box';
+import { getAuthorStatusImage } from '@/utilities';
 
 export const AuthorAvatar = (props: { author: IAuthor; name: string }) => {
   const { author, name } = props;
@@ -26,9 +27,7 @@ export const AuthorAvatar = (props: { author: IAuthor; name: string }) => {
       <Box className={bodyStyles['character-information-author-verify']}>
         <Image
           style={{ width: 12, height: 12 }}
-          src={
-            author?.onlineStatus ? '/verified-green.svg' : '/verified-red.svg'
-          }
+          src={getAuthorStatusImage(author?.onlineStatus)}
           alt={name}
         />
       </Box>

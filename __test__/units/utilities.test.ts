@@ -1,5 +1,5 @@
 import { formatPrice, getGradient } from '@/utilities';
-import { gradients } from "@/common";
+import { gradients } from '@/common';
 
 describe('src/utilities/index.ts', () => {
   test('Format Price', () => {
@@ -10,9 +10,7 @@ describe('src/utilities/index.ts', () => {
 
   test('Get gradient', () => {
     for (const gradientKey in gradients) {
-      expect(getGradient(gradientKey)).toBe(
-        gradients[gradientKey]
-      );
+      expect(getGradient(gradientKey)).toBe(gradients[gradientKey]);
     }
     expect(getGradient('other')).toBe('');
   });

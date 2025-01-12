@@ -9,11 +9,24 @@ export const CharacterCard: React.FC<{
   information: ICharacter;
   loading?: boolean;
 }> = ({ information, loading = false }) => {
-  const { id, title: name, author, imageId, price, category } = information;
+  const {
+    id,
+    title: name,
+    author,
+    imageId,
+    price,
+    category,
+    isFavorite,
+  } = information;
 
   return (
     <Card loading={loading} className={bodyStyles['character-card']} hoverable>
-      <CharacterCardAvatar id={id} imageId={imageId} category={category} />
+      <CharacterCardAvatar
+        id={id}
+        imageId={imageId}
+        category={category}
+        isFavorite={isFavorite}
+      />
       <CharacterCardInformation name={name} price={price} author={author} />
     </Card>
   );

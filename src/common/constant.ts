@@ -13,3 +13,10 @@ export const gradients: { [key: string]: string } = {
   Shoes: 'linear-gradient(90.13deg, #3F51B5 0%, #4CAF50 100%)',
   Accessory: 'linear-gradient(90.13deg, #FF5722 0%, #795548 100%)',
 };
+
+export const authorStatuses: { [key: string]: string } = {
+  idle: '/idle-status.svg',
+  offline: '/offline-status.svg',
+  busy: '/busy-status.svg',
+  online: '/online-status.svg',
+};

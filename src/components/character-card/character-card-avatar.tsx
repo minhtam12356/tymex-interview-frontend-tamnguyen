@@ -8,8 +8,9 @@ export const CharacterCardAvatar = (props: {
   id: number;
   imageId: number;
   category: string;
+  isFavorite: boolean;
 }) => {
-  const { id, imageId, category } = props;
+  const { id, imageId, category, isFavorite } = props;
 
   return (
     <Space
@@ -20,7 +21,10 @@ export const CharacterCardAvatar = (props: {
       <Box className={bodyStyles['character-card-avatar-header']}>
         <Box className={bodyStyles['card-category']}>{category}</Box>
         <Box className={bodyStyles.love}>
-          <Image src="/love.svg" alt="love icon" />
+          <Image
+            src={isFavorite ? '/love.svg' : '/un-love.svg'}
+            alt="favorite icon"
+          />
         </Box>
       </Box>
       <Box className={bodyStyles.avatar}>

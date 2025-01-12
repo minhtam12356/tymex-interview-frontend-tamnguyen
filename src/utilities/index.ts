@@ -1,4 +1,4 @@
-import { gradients } from "@/common";
+import { authorStatuses, gradients } from '@/common';
 
 export const debounce = (cb: any, delay: number) => {
   let timeout: NodeJS.Timeout;
@@ -42,6 +42,10 @@ export const getCharacterImage = (imageId: number) => {
 
 export const getGradient = (type: string) => {
   return gradients[type] ?? '';
+};
+
+export const getAuthorStatusImage = (status: string) => {
+  return authorStatuses[status] ?? '';
 };
 
 export const formatPrice = (price: number) => {

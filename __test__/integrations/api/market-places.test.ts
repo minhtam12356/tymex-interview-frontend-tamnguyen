@@ -42,7 +42,9 @@ describe('src/app/api/market-places/route.ts', () => {
         const currentCategory = category.value;
 
         axios
-          .get(`${process.env.BE_URL}/api/market-places?category=${currentCategory}`)
+          .get(
+            `${process.env.BE_URL}/api/market-places?category=${currentCategory}`
+          )
           .then((response) => {
             let isMatchCategory = true;
 

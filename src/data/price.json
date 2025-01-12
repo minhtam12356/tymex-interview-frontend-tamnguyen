@@ -1,5 +1,9 @@
 [
   {
+    "value": "all",
+    "label": "All"
+  },
+  {
     "value": "low-to-high",
     "label": "Low to high"
   },

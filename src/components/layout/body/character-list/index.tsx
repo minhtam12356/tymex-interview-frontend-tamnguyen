@@ -24,8 +24,12 @@ export const CharacterList = () => {
     const queryObject = getParams();
     delete queryObject['page'];
 
-    if (queryObject?.tier === 'all') {
-      delete queryObject['tier'];
+    const exceptQueryIsAll = ['tier', 'price', 'category', 'time', 'theme'];
+
+    for (const query of exceptQueryIsAll) {
+      if (queryObject[query] === 'all') {
+        delete queryObject[query];
+      }
     }
 
     return queryObject;

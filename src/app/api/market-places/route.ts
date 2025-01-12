@@ -1,6 +1,6 @@
 import { type NextRequest } from 'next/server';
 import marketPlaces from '@/data/market-places.json';
-import { DEFAULT_LIMIT } from '@/common';
+import { DEFAULT_LIMIT, ICharacter } from '@/common';
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
@@ -11,16 +11,20 @@ export async function GET(request: NextRequest) {
   const priceStart = +(searchParams?.get('priceStart') ?? 0);
   const priceEnd = +(searchParams?.get('priceEnd') ?? 0);
   const tier = searchParams?.get('tier') ?? '';
+  const category = searchParams?.get('category') ?? '';
+  const theme = searchParams?.get('theme') ?? '';
   const time = searchParams?.get('time') ?? '';
   const price = searchParams?.get('price');
 
   const start = offset;
   const end = offset + limit;
 
-  let data = marketPlaces.filter((marketPlace) => {
+  let data: ICharacter[] = marketPlaces.products.filter((marketPlace) => {
     return (
-      marketPlace.name.toLowerCase().includes(text.toLowerCase()) &&
-      (tier ? marketPlace.type === tier : true) &&
+      marketPlace.title.toLowerCase().includes(text.toLowerCase()) &&
+      (tier ? marketPlace.tier.toLowerCase() === tier : true) &&
+      (category ? marketPlace.category === category : true) &&
+      (theme ? marketPlace.theme.toLowerCase() === theme : true) &&
       marketPlace.price >= priceStart &&
       (priceEnd ? marketPlace.price <= priceEnd : true)
     );
@@ -29,9 +33,9 @@ export async function GET(request: NextRequest) {
   if (time) {
     data = data.sort((prev, curr) => {
       if (time === 'oldest') {
-        return prev.id - curr.id;
+        return prev.createdAt - curr.createdAt;
       }
-      return curr.id - prev.id;
+      return curr.createdAt - prev.createdAt;
     });
   }
 

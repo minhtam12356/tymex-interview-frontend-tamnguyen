@@ -27,6 +27,7 @@ export const ExpandFilter = () => {
   const filterParamsCount = React.useMemo(() => {
     const params = getParams();
     delete params['page'];
+    delete params['category'];
     delete params['text'];
     delete params['priceStart'];
     delete params['priceEnd'];

@@ -5,8 +5,8 @@ import { UserOutlined } from '@ant-design/icons';
 import bodyStyles from '@/styles/modules/body.module.css';
 import { Box } from '@/components/box';
 
-export const AuthorAvatar = (props: { author: IAuthor }) => {
-  const { author } = props;
+export const AuthorAvatar = (props: { author: IAuthor; name: string }) => {
+  const { author, name } = props;
 
   return (
     <Box className={bodyStyles['character-information-author-avatar']}>
@@ -16,7 +16,7 @@ export const AuthorAvatar = (props: { author: IAuthor }) => {
             <Image
               style={{ width: 32, height: 32 }}
               src={author?.avatar}
-              alt={author.name}
+              alt={name}
             />
           ) : (
             <UserOutlined />
@@ -26,8 +26,10 @@ export const AuthorAvatar = (props: { author: IAuthor }) => {
       <Box className={bodyStyles['character-information-author-verify']}>
         <Image
           style={{ width: 12, height: 12 }}
-          src={author?.verified ? '/verified-green.svg' : '/verified-red.svg'}
-          alt={author.name}
+          src={
+            author?.onlineStatus ? '/verified-green.svg' : '/verified-red.svg'
+          }
+          alt={name}
         />
       </Box>
     </Box>

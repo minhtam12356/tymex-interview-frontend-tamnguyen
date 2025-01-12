@@ -1,5 +1,5 @@
 import axios from 'axios';
-import tiers from '@/data/tier.json';
+import categories from '@/data/categories.json';
 
 describe('src/app/api/market-places/route.ts', () => {
   // Test get all
@@ -9,15 +9,21 @@ describe('src/app/api/market-places/route.ts', () => {
     expect(response?.data).toHaveProperty('data');
 
     expect(response?.data?.data?.[0]).toHaveProperty('id');
-    expect(response?.data?.data?.[0]).toHaveProperty('name');
-    expect(response?.data?.data?.[0]).toHaveProperty('type');
+    expect(response?.data?.data?.[0]).toHaveProperty('title');
+    expect(response?.data?.data?.[0]).toHaveProperty('category');
     expect(response?.data?.data?.[0]).toHaveProperty('price');
-    expect(response?.data?.data?.[0]).toHaveProperty('image');
-    expect(response?.data?.data?.[0]).toHaveProperty('unit');
+    expect(response?.data?.data?.[0]).toHaveProperty('isFavorite');
+    expect(response?.data?.data?.[0]).toHaveProperty('createdAt');
+    expect(response?.data?.data?.[0]).toHaveProperty('theme');
+    expect(response?.data?.data?.[0]).toHaveProperty('tier');
+    expect(response?.data?.data?.[0]).toHaveProperty('imageId');
     expect(response?.data?.data?.[0]).toHaveProperty('author');
-    expect(response?.data?.data?.[0]).toHaveProperty('author.name');
-    expect(response?.data?.data?.[0]).toHaveProperty('author.verified');
+    expect(response?.data?.data?.[0]).toHaveProperty('author.firstName');
+    expect(response?.data?.data?.[0]).toHaveProperty('author.lastName');
+    expect(response?.data?.data?.[0]).toHaveProperty('author.email');
+    expect(response?.data?.data?.[0]).toHaveProperty('author.gender');
     expect(response?.data?.data?.[0]).toHaveProperty('author.avatar');
+    expect(response?.data?.data?.[0]).toHaveProperty('author.onlineStatus');
   });
 
   // Test query param limit
@@ -29,28 +35,28 @@ describe('src/app/api/market-places/route.ts', () => {
     expect(response?.data?.data?.length).toBe(10);
   });
 
-  // Test query param (Example: tier=common)
-  Promise.all(
-    tiers.map((tier) => {
-      const currentTier = tier.value;
+  // Test query param (Example: category=common)
+  test('Method GET with query category', () => {
+    Promise.all(
+      categories.map((category) => {
+        const currentCategory = category.value;
 
-      test('Method GET with query tier', () => {
         axios
-          .get(`${process.env.BE_URL}/api/market-places?tier=${currentTier}`)
+          .get(`${process.env.BE_URL}/api/market-places?category=${currentCategory}`)
           .then((response) => {
-            let isMatchTier = true;
+            let isMatchCategory = true;
 
             if (response?.data?.length) {
-              isMatchTier = response?.data?.every(
-                (t: { type: string }) => t.type === currentTier
+              isMatchCategory = response?.data?.every(
+                (t: { type: string }) => t.type === currentCategory
               );
             }
 
             expect(response?.data).toHaveProperty('total');
             expect(response?.data).toHaveProperty('data');
-            expect(isMatchTier).toBe(true);
+            expect(isMatchCategory).toBe(true);
           });
-      });
-    })
-  );
+      })
+    );
+  });
 });

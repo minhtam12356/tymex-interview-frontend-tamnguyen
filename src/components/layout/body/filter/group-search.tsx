@@ -10,19 +10,14 @@ import { Box } from '@/components/box';
 
 const defaultFilters = {
   tier: 'all',
-  theme: 'halloween',
-  time: 'latest',
-  price: 'low-to-high',
+  theme: 'all',
+  time: 'all',
+  price: 'all',
 };
 
 export const GroupSearch = () => {
-  const { onChangeParams, getParam } = useChangeParam();
-  const [filters, setFilters] = React.useState<typeof defaultFilters>({
-    tier: '',
-    theme: '',
-    time: '',
-    price: '',
-  });
+  const { onChangeParams, onClearParams, getParam } = useChangeParam();
+  const [filters, setFilters] = React.useState(defaultFilters);
 
   const onChangeFilter = (key: string, value: string) => {
     setFilters((prevFilter) => {
@@ -34,7 +29,7 @@ export const GroupSearch = () => {
   };
 
   const onClearFilter = () => {
-    onChangeParams(defaultFilters);
+    onClearParams(Object.keys(defaultFilters));
     setFilters(defaultFilters);
   };
 
@@ -44,10 +39,10 @@ export const GroupSearch = () => {
 
   React.useEffect(() => {
     const currentParams = {
-      tier: getParam('tier') ?? 'all',
-      theme: getParam('theme') ?? 'halloween',
-      time: getParam('time') ?? 'latest',
-      price: getParam('price') ?? 'low-to-high',
+      tier: getParam('tier') ?? defaultFilters.tier,
+      theme: getParam('theme') ?? defaultFilters.theme,
+      time: getParam('time') ?? defaultFilters.time,
+      price: getParam('price') ?? defaultFilters.price,
     };
 
     setFilters(currentParams);

@@ -5,6 +5,7 @@ import React from 'react';
 import { useChangeParam } from '@/hook/useChangeParam';
 import bodyStyles from '@/styles/modules/body.module.css';
 import { Box } from '@/components/box';
+import { DEFAULT_UNIT } from '@/common';
 
 interface IPriceSliderProps {
   name?: string;
@@ -32,7 +33,7 @@ export const PriceSlider: React.FC<IPriceSliderProps> = ({}) => {
             autoAdjustOverflow: false,
             placement: 'top',
             className: 'slider-range-custom',
-            formatter: (value) => `${value} ETH`,
+            formatter: (value) => `${value} ${DEFAULT_UNIT}`,
             open: true,
           }}
           styles={{
@@ -67,7 +68,7 @@ export const PriceSlider: React.FC<IPriceSliderProps> = ({}) => {
       <Box
         className={`font-16 font-white hide-upper-1440 ${bodyStyles['slider-label']}`}
       >
-        ETH
+        {DEFAULT_UNIT}
       </Box>
     </Box>
   );

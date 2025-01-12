@@ -1,6 +1,6 @@
 'use client';
 
-import tiers from '@/data/tier.json';
+import categories from '@/data/categories.json';
 import { Tabs } from 'antd';
 import { useChangeParam } from '@/hook/useChangeParam';
 import { Image } from '@/components/image';
@@ -8,22 +8,22 @@ import { Image } from '@/components/image';
 export const SubFilter = () => {
   const { onChangeParam, getParam } = useChangeParam();
 
-  const onChangeTier = (value: string) => {
-    onChangeParam('tier', value);
+  const onChangeCategory = (value: string) => {
+    onChangeParam('category', value);
   };
 
   return (
     <Tabs
       className="sub-filter"
-      defaultActiveKey={getParam('tier') ?? ''}
+      defaultActiveKey={getParam('category') ?? ''}
       tabPosition="top"
-      items={tiers.map((tier) => {
+      items={categories.map((category) => {
         return {
-          label: tier.label,
-          key: tier.value,
+          label: category.label,
+          key: category.value,
         };
       })}
-      onChange={onChangeTier}
+      onChange={onChangeCategory}
       moreIcon={
         <Image
           style={{ width: 18, height: 11 }}

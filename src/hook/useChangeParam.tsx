@@ -35,10 +35,22 @@ export const useChangeParam = () => {
     router.push(`?${params}`, { scroll: false });
   };
 
+  const onClearParams = (queryParams: string[]) => {
+    const queryObject = getParams();
+
+    for (const queryParam of queryParams) {
+      delete queryObject[queryParam];
+    }
+
+    const params = new URLSearchParams(queryObject).toString();
+    router.push(`?${params}`, { scroll: false });
+  };
+
   return {
     getParams,
     getParam,
     onChangeParams,
     onChangeParam,
+    onClearParams,
   };
 };

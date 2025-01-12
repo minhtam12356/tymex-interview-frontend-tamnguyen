@@ -4,43 +4,15 @@
     "label": "All"
   },
   {
-    "value": "upper-body",
-    "label": "Upper Body"
+    "value": "basic",
+    "label": "Basic"
   },
   {
-    "value": "lower-body",
-    "label": "Lower Body"
+    "value": "premium",
+    "label": "Premium"
   },
   {
-    "value": "hat",
-    "label": "Hat"
-  },
-  {
-    "value": "shoes",
-    "label": "Shoes"
-  },
-  {
-    "value": "accessory",
-    "label": "Accessory"
-  },
-  {
-    "value": "legendary",
-    "label": "Legendary"
-  },
-  {
-    "value": "mythic",
-    "label": "Mythic"
-  },
-  {
-    "value": "epic",
-    "label": "Epic"
-  },
-  {
-    "value": "rare",
-    "label": "Rare"
-  },
-  {
-    "value": "common",
-    "label": "Common"
+    "value": "deluxe",
+    "label": "Deluxe"
   }
 ]

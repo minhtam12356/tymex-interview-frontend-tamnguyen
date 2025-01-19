@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     icon: '/favico.webp',
     shortcut: '/favico.webp',
   },
+  other: {
+    'google-adsense-account': 'ca-pub-6861885330336018',
+  },
 };
 
 export default function RootLayout({
@@ -25,6 +28,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <header>
+        <meta name="google-adsense-account" content="ca-pub-6861885330336018" />
+      </header>
       <body className={inter.className}>
         <Suspense>
           <AntdRegistry>{children}</AntdRegistry>

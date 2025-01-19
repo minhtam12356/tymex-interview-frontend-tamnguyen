@@ -28,9 +28,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <header>
+      {/* <header>
         <meta name="google-adsense-account" content="ca-pub-6861885330336018" />
-      </header>
+      </header> */}
       <body className={inter.className}>
         <Suspense>
           <AntdRegistry>{children}</AntdRegistry>
